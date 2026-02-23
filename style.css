@@ -1,157 +1,282 @@
 /* =========================
-   RESET BÁSICO
+RESET
 ========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
+body{
+font-family:'Inter',sans-serif;
+background:linear-gradient(135deg,#fff7f4,#fdf1ee);
+color:#5c4b4b;
+}
 
 /* =========================
-   VARIÁVEIS DE CORES
+CORES NUDE PASTEL VIVAS
 ========================= */
-:root {
 
-  /* fundos */
-  --fundo-principal: #fdf7f5;
-  --card-bg: #ffffff;
+:root{
+--rose:#f4c6cc;
+--pessego:#f8d2b3;
+--lavanda:#e3d6f3;
+--salvia:#cfe3d8;
 
-  /* textos */
-  --texto-principal: #5c4b4b;
-  --texto-secundario: #8a6f6f;
+--hover-rose:#eaaab2;
+--hover-pessego:#f2b98f;
+--hover-lavanda:#d1bdf0;
+--hover-salvia:#b9d5c8;
 
-  /* nudes pastel MAIS VIVOS */
-  --nude-rose: #f4c6cc;
-  --nude-pessego: #f8d2b3;
-  --nude-lavanda: #e3d6f3;
-  --nude-areia: #f3e2cf;
-  --nude-caramelo: #e6bfa8;
-  --nude-salvia: #cfe3d8;
-
-  /* hover mais forte */
-  --hover-rose: #eaaab2;
-  --hover-pessego: #f2b98f;
-  --hover-lavanda: #d1bdf0;
-  --hover-areia: #e7cfb4;
-  --hover-caramelo: #d9a989;
-  --hover-salvia: #b9d5c8;
-
-  /* sombra */
-  --sombra: 0 6px 18px rgba(0,0,0,0.08);
+--card:#ffffff;
+--sombra:0 6px 18px rgba(0,0,0,0.08);
 }
-
 
 /* =========================
-   FUNDO
+TOPBAR
 ========================= */
-body {
-  background: linear-gradient(135deg, #fff7f4, #fdf1ee);
-  color: var(--texto-principal);
-  padding: 40px;
+.topbar{
+background:#5c4b4b;
+color:white;
+text-align:center;
+padding:8px;
+font-size:14px;
 }
-
 
 /* =========================
-   CARD
+MENU
 ========================= */
-.card {
-  background: var(--card-bg);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: var(--sombra);
-  max-width: 420px;
-  margin: auto;
-  text-align: center;
+nav{
+background:white;
+padding:18px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
+.logo{
+font-family:'Playfair Display',serif;
+font-size:24px;
+letter-spacing:2px;
+}
+
+.menu a{
+margin:0 12px;
+text-decoration:none;
+color:#5c4b4b;
+font-weight:500;
+}
+
+.cart-btn{
+background:var(--rose);
+padding:8px 14px;
+border-radius:8px;
+cursor:pointer;
+}
 
 /* =========================
-   IMAGEM OPCIONAL
+HERO
 ========================= */
-.card img {
-  width: 100%;
-  border-radius: 16px;
-  margin-bottom: 20px;
-  object-fit: cover;
+.hero{
+text-align:center;
+padding:70px 20px;
+max-width:900px;
+margin:auto;
 }
 
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:38px;
+margin-bottom:10px;
+}
+
+.hero p{
+margin-bottom:25px;
+color:#8a6f6f;
+}
 
 /* =========================
-   TITULO
+BOTÕES LOJA
 ========================= */
-.card h2 {
-  margin-bottom: 10px;
-  font-weight: 600;
+.botao{
+padding:12px 22px;
+border-radius:12px;
+text-decoration:none;
+font-weight:500;
+margin:6px;
+display:inline-block;
+transition:.25s;
+color:#4a3f35;
 }
 
+.botao-rose{background:var(--rose);}
+.botao-rose:hover{background:var(--hover-rose);}
+
+.botao-pessego{background:var(--pessego);}
+.botao-pessego:hover{background:var(--hover-pessego);}
+
+.botao-lavanda{background:var(--lavanda);}
+.botao-lavanda:hover{background:var(--hover-lavanda);}
+
+.botao-salvia{background:var(--salvia);}
+.botao-salvia:hover{background:var(--hover-salvia);}
 
 /* =========================
-   TEXTO
+PRODUTOS
 ========================= */
-.card p {
-  color: var(--texto-secundario);
-  margin-bottom: 25px;
+.produtos{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
 }
 
+.produtos h2{
+text-align:center;
+margin-bottom:30px;
+font-family:'Playfair Display',serif;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
 
 /* =========================
-   BOTÕES BASE
+CARD PRODUTO
 ========================= */
-.btn {
-  border: none;
-  padding: 12px 20px;
-  border-radius: 12px;
-  cursor: pointer;
-  margin: 6px;
-  font-weight: 500;
-  transition: 0.25s ease;
+.card{
+background:var(--card);
+padding:20px;
+border-radius:18px;
+box-shadow:var(--sombra);
+text-align:center;
+transition:.25s;
 }
 
+.card:hover{
+transform:translateY(-4px);
+}
+
+/* imagem opcional */
+.card img{
+width:100%;
+border-radius:12px;
+margin-bottom:12px;
+}
+
+.nome{
+font-weight:600;
+margin-bottom:6px;
+}
+
+.preco{
+color:#b88b73;
+font-weight:700;
+margin-bottom:12px;
+}
+
+/* botão adicionar */
+.add{
+background:var(--pessego);
+border:none;
+padding:10px;
+border-radius:10px;
+cursor:pointer;
+width:100%;
+font-weight:500;
+}
+
+.add:hover{
+background:var(--hover-pessego);
+}
 
 /* =========================
-   CORES DOS BOTÕES
+SEÇÕES INFO
 ========================= */
-
-.btn-rose {
-  background: var(--nude-rose);
-}
-.btn-rose:hover {
-  background: var(--hover-rose);
-}
-
-.btn-pessego {
-  background: var(--nude-pessego);
-}
-.btn-pessego:hover {
-  background: var(--hover-pessego);
+.info{
+padding:60px 20px;
+max-width:800px;
+margin:auto;
+text-align:center;
 }
 
-.btn-lavanda {
-  background: var(--nude-lavanda);
-}
-.btn-lavanda:hover {
-  background: var(--hover-lavanda);
+.info h2{
+margin-bottom:15px;
+font-family:'Playfair Display',serif;
 }
 
-.btn-areia {
-  background: var(--nude-areia);
-}
-.btn-areia:hover {
-  background: var(--hover-areia);
+.info p{
+color:#7a6464;
+line-height:1.6;
 }
 
-.btn-caramelo {
-  background: var(--nude-caramelo);
-}
-.btn-caramelo:hover {
-  background: var(--hover-caramelo);
+/* =========================
+CARRINHO
+========================= */
+.cart{
+position:fixed;
+right:-380px;
+top:0;
+width:320px;
+height:100vh;
+background:white;
+box-shadow:-5px 0 20px rgba(0,0,0,.2);
+padding:20px;
+transition:.3s;
+overflow:auto;
+z-index:2000;
 }
 
-.btn-salvia {
-  background: var(--nude-salvia);
+.cart.open{
+right:0;
 }
-.btn-salvia:hover {
-  background: var(--hover-salvia);
+
+.checkout{
+background:var(--rose);
+border:none;
+padding:12px;
+width:100%;
+border-radius:10px;
+margin-top:12px;
+cursor:pointer;
+}
+
+/* =========================
+WHATS FIXO
+========================= */
+.whatsapp-fixo{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* =========================
+RESPONSIVO
+========================= */
+@media(max-width:768px){
+
+.hero h1{
+font-size:28px;
+}
+
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+.menu{
+text-align:center;
+}
+
 }
