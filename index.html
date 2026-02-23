@@ -3,124 +3,132 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vânia Modas | Loja online</title>
-<meta name="description" content="Loja online de moda feminina moderna e elegante.">
-<link rel="icon" href="favicon.png">
+<title>Vania Modas</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-</head>
 
+</head>
 <body>
 
-<div class="banner">🎉 CUPOM BEMVINDA10 — 10% OFF na primeira compra</div>
+<!-- TOPO / LOGO -->
+<header class="topo">
+<img src="logo.png" class="logo">
+</header>
 
-<nav>
-<div class="logo">VÂNIA MODAS</div>
-
-<div class="menu">
+<!-- MENU AZUL -->
+<nav class="menu">
+<a href="#">Home</a>
 <a href="#produtos">Produtos</a>
 <a href="#sobre">Sobre</a>
 <a href="#contato">Contato</a>
 <a href="#politicas">Políticas</a>
-</div>
-
-<span class="cart-btn" onclick="toggleCart()">Carrinho (<span id="count">0</span>)</span>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-<h1>Moda feminina moderna e elegante</h1>
-<p>Compre direto no site ou em nossas plataformas</p>
+<h1>Moda feminina elegante e acessível 💕</h1>
 
-<a class="botao whats" href="https://wa.me/5511971386664" target="_blank">WhatsApp</a>
-<a class="botao enjoei" href="https://enjoei.com.br/vaniamodas" target="_blank">Enjoei</a>
-<a class="botao shopee" href="https://s.shopee.com.br/7AYKPWVtTs" target="_blank">Shopee</a>
-<a class="botao grupo" href="https://chat.whatsapp.com/LoO4h3hLxGiLwfIPNtbfMi" target="_blank">Grupo VIP</a>
+<a class="botao" href="https://s.shopee.com.br/7AYKPWVtTs" target="_blank">Comprar na Shopee</a>
+
+<a class="botao" href="https://enjoei.com.br/vaniamodas" target="_blank">Loja Enjoei</a>
+
+<a class="botao" href="https://chat.whatsapp.com/LoO4h3hLxGiLwfIPNtbfMi" target="_blank">
+Grupo Promoções WhatsApp
+</a>
+
+<a class="botao" href="https://tiktok.com/@vania.lima.da.sil6" target="_blank">
+TikTok Loja
+</a>
+
+<!-- COLOQUE SEU WHATS DIRETO DE VENDAS -->
+<a class="botao" href="https://wa.me/SEUNUMERO" target="_blank">
+Falar com Vendedora
+</a>
+
 </section>
 
-<section class="produtos" id="produtos">
-<h2>Produtos</h2>
-<div class="grid" id="produtos"></div>
+<!-- PRODUTOS -->
+<section id="produtos">
+<h2 style="text-align:center">Nossos Produtos</h2>
+
+<div class="produtos">
+
+<div class="produto">
+<img src="https://images.unsplash.com/photo-1520975922284-9c4c1c7a0d48">
+<h3>Vestido Floral</h3>
+<p class="preco">R$ 89</p>
+<button class="btn-comprar" onclick="add(0)">Comprar</button>
+</div>
+
+<div class="produto">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+<h3>Blusa Elegante</h3>
+<p class="preco">R$ 59</p>
+<button class="btn-comprar" onclick="add(1)">Comprar</button>
+</div>
+
+<div class="produto">
+<img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1">
+<h3>Saia Midi</h3>
+<p class="preco">R$ 79</p>
+<button class="btn-comprar" onclick="add(2)">Comprar</button>
+</div>
+
+<div class="produto">
+<img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9">
+<h3>Conjunto Feminino</h3>
+<p class="preco">R$ 129</p>
+<button class="btn-comprar" onclick="add(3)">Comprar</button>
+</div>
+
+<div class="produto">
+<img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3">
+<h3>Bolsa Fashion</h3>
+<p class="preco">R$ 99</p>
+<button class="btn-comprar" onclick="add(4)">Comprar</button>
+</div>
+
+</div>
 </section>
 
 <!-- SOBRE -->
-<section id="sobre" style="padding:60px 20px; max-width:900px; margin:auto; text-align:center;">
-<h2>Sobre a Vânia Modas</h2>
+<section id="sobre" class="sobre">
+<h2>Sobre a Vania Modas</h2>
 <p>
-A Vânia Modas é uma loja online especializada em moda feminina moderna e elegante.
-Selecionamos peças com qualidade, estilo e ótimo custo benefício.
-
-Nosso objetivo é oferecer uma experiência prática, segura e encantadora para cada cliente.
+A Vania Modas nasceu para trazer estilo, elegância e preço justo.
+Selecionamos peças modernas e femininas para valorizar sua beleza
+em qualquer ocasião.
 </p>
 </section>
 
 <!-- CONTATO -->
-<section id="contato" style="padding:60px 20px; background:white; text-align:center;">
+<section id="contato" class="sobre">
 <h2>Contato</h2>
-<p>Atendimento rápido e direto:</p>
-
-<p>
-WhatsApp: <a href="https://wa.me/5511971386664" target="_blank">Clique para conversar</a>
-</p>
-
-<p>
-Instagram: <a href="https://instagram.com/vaniamodas_pirajui" target="_blank">@vaniamodas_pirajui</a>
-</p>
-
-<p>
-TikTok: <a href="https://tiktok.com/@vania.lima.da.sil6" target="_blank">@vania.lima.da.sil6</a>
-</p>
+<p>WhatsApp vendas: clique no botão acima</p>
+<p>Grupo promoções exclusivas no WhatsApp</p>
+<p>Siga nossa loja no TikTok</p>
 </section>
 
 <!-- POLITICAS -->
-<section id="politicas" style="padding:60px 20px; max-width:900px; margin:auto;">
+<section id="politicas" class="sobre">
 <h2>Políticas da Loja</h2>
 
-<h3>Trocas e Devoluções</h3>
-<p>
-Aceitamos trocas em até 7 dias após o recebimento do produto.
-A peça deve estar sem uso e com etiqueta.
-</p>
+<p><b>Envio:</b> Correios para todo Brasil</p>
+<p><b>Prazo:</b> conforme cálculo do frete</p>
+<p><b>Trocas:</b> até 7 dias após recebimento</p>
+<p><b>Pagamento:</b> PIX ou plataformas parceiras</p>
 
-<h3>Envio</h3>
-<p>
-Os pedidos são enviados via Correios após confirmação do pagamento.
-O prazo depende do CEP informado.
-</p>
-
-<h3>Pagamento</h3>
-<p>
-Aceitamos pagamento via PIX, WhatsApp ou plataformas parceiras.
-</p>
 </section>
 
-<div class="cart" id="cart">
-<h2>Seu carrinho</h2>
-<div id="cartItems"></div>
-
-<h3>Subtotal: R$ <span id="subtotal">0</span></h3>
-<h3>Frete: R$ <span id="frete">0</span></h3>
-<h2>Total: R$ <span id="total">0</span></h2>
-
-<input id="cupom" placeholder="Cupom desconto">
-<button onclick="aplicarCupom()">Aplicar cupom</button>
-
-<input id="cep" placeholder="Digite seu CEP">
-<button onclick="calcularFrete()">Calcular frete (Correios)</button>
-
-<button class="checkout" onclick="checkoutWhats()">Finalizar WhatsApp</button>
-<button class="pix" onclick="pagarPix()">Pagar com PIX</button>
-</div>
-
+<!-- RODAPÉ -->
 <footer>
-© 2026 Vânia Modas — Todos os direitos reservados
+<p>© 2025 Vania Modas — Todos os direitos reservados</p>
 </footer>
-
-<a class="whatsapp" href="https://wa.me/5511971386664" target="_blank">WhatsApp</a>
 
 <!-- FIREBASE -->
 <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+
 <script src="firebase.js"></script>
 <script src="app.js"></script>
 
