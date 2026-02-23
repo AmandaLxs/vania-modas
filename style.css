@@ -169,9 +169,7 @@ padding:20px;
 text-align:center;
 }
 
-.logo-grande{
-height:180px;
-max-width:320px;
-object-fit:contain;
-filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+.logo {
+  height: 50px; /* ideal: 40–60px */
+  width: auto;
 }
