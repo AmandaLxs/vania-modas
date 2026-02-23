@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vânia Modas | Loja online</title>
-<meta name="description" content="Loja online de moda feminina moderna e elegante. Compre pelo site, WhatsApp, Shopee ou Enjoei.">
+<meta name="description" content="Loja online de moda feminina moderna e elegante.">
 <link rel="icon" href="favicon.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -12,198 +12,67 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 
-body{
-font-family:'Inter',sans-serif;
-background:#f6efe8;
-color:#4a3f35;
-}
+body{font-family:'Inter',sans-serif;background:#f6efe8;color:#4a3f35}
 
-.topbar{
-background:#4a3f35;
+.banner{
+background:#ff6f91;
 color:white;
+padding:10px;
 text-align:center;
-padding:8px;
-font-size:14px;
-}
-
-nav{
-background:white;
-padding:18px 30px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid #eee;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-.logo{
-font-family:'Playfair Display',serif;
-font-size:24px;
-letter-spacing:2px;
-}
-
-.menu a{
-margin-left:20px;
-text-decoration:none;
-color:#4a3f35;
-font-weight:500;
-}
-
-.cart-btn{
-cursor:pointer;
-background:#c7a17a;
-color:white;
-padding:8px 14px;
-border-radius:6px;
-margin-left:20px;
-}
-
-.hero{
-text-align:center;
-padding:80px 20px;
-max-width:900px;
-margin:auto;
-}
-
-.hero h1{
-font-family:'Playfair Display',serif;
-font-size:42px;
-margin-bottom:15px;
-}
-
-.botao{
-display:inline-block;
-padding:14px 28px;
-border-radius:6px;
-text-decoration:none;
 font-weight:600;
-margin:6px;
 }
 
+nav{background:white;padding:18px 30px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;position:sticky;top:0;z-index:1000}
+.logo{font-family:'Playfair Display',serif;font-size:24px;letter-spacing:2px}
+.cart-btn{cursor:pointer;background:#c7a17a;color:white;padding:8px 14px;border-radius:6px}
+
+.hero{text-align:center;padding:60px 20px}
+.hero h1{font-family:'Playfair Display',serif;font-size:42px;margin-bottom:10px}
+
+.botao{display:inline-block;padding:14px 28px;border-radius:6px;text-decoration:none;font-weight:600;margin:6px}
 .whats{background:#25d366;color:white}
 .enjoei{background:#ff3b6b;color:white}
 .shopee{background:#ff6a00;color:white}
 .grupo{background:#c7a17a;color:white}
 
-.produtos{
-padding:60px 20px;
-max-width:1100px;
-margin:auto;
-}
+.produtos{padding:40px 20px;max-width:1100px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:25px}
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:18px;
-border-radius:10px;
-box-shadow:0 4px 15px rgba(0,0,0,0.05);
-text-align:center;
-}
-
-.foto{
-height:260px;
-background:#eee;
-border-radius:6px;
-margin-bottom:15px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:13px;
-color:#999;
-}
-
+.card{background:white;padding:18px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.05);text-align:center}
+.foto{height:260px;background:#eee;border-radius:6px;margin-bottom:15px;display:flex;align-items:center;justify-content:center;color:#999}
 .nome{font-weight:600;margin-bottom:5px}
 .preco{color:#c7a17a;font-weight:700;margin-bottom:10px}
 
-.add{
-background:#4a3f35;
-color:white;
-padding:10px;
-border:none;
-border-radius:6px;
-cursor:pointer;
-margin-top:8px;
-width:100%;
-}
+.add{background:#4a3f35;color:white;padding:10px;border:none;border-radius:6px;cursor:pointer;width:100%}
 
-.cart{
-position:fixed;
-right:-400px;
-top:0;
-width:350px;
-height:100vh;
-background:white;
-box-shadow:-5px 0 20px rgba(0,0,0,.2);
-padding:20px;
-transition:.3s;
-z-index:2000;
-overflow:auto;
-}
-
+.cart{position:fixed;right:-420px;top:0;width:380px;height:100vh;background:white;box-shadow:-5px 0 20px rgba(0,0,0,.2);padding:20px;transition:.3s;z-index:2000;overflow:auto}
 .cart.open{right:0}
+.cart h2{margin-bottom:15px}
+.cart-item{margin-bottom:10px;border-bottom:1px solid #eee;padding-bottom:8px}
 
-.cart h2{margin-bottom:20px}
+input{width:100%;padding:10px;margin-top:8px;border-radius:6px;border:1px solid #ddd}
 
-.cart-item{
-margin-bottom:15px;
-border-bottom:1px solid #eee;
-padding-bottom:10px;
-}
+.checkout{background:#25d366;color:white;padding:14px;border:none;border-radius:6px;width:100%;margin-top:10px;font-weight:600;cursor:pointer}
+.pix{background:#333;color:white;padding:14px;border:none;border-radius:6px;width:100%;margin-top:10px}
 
-.checkout{
-background:#25d366;
-color:white;
-padding:14px;
-border:none;
-border-radius:6px;
-width:100%;
-margin-top:15px;
-font-weight:600;
-cursor:pointer;
-}
+footer{text-align:center;padding:30px;margin-top:40px}
 
-footer{
-text-align:center;
-padding:30px;
-margin-top:40px;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25d366;
-color:white;
-padding:14px 18px;
-border-radius:50px;
-text-decoration:none;
-font-weight:600;
-}
-
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:600}
 </style>
 </head>
 
 <body>
 
-<div class="topbar">Promoções exclusivas no grupo VIP</div>
+<div class="banner">🎉 CUPOM BEMVINDA10 — 10% OFF na primeira compra</div>
 
 <nav>
 <div class="logo">VÂNIA MODAS</div>
-<div>
 <span class="cart-btn" onclick="toggleCart()">Carrinho (<span id="count">0</span>)</span>
-</div>
 </nav>
 
 <section class="hero">
 <h1>Moda feminina moderna e elegante</h1>
-<p>Compre direto no site ou em nossas plataformas.</p>
+<p>Compre direto no site ou em nossas plataformas</p>
 
 <a class="botao whats" href="https://wa.me/5511971386664" target="_blank">WhatsApp</a>
 <a class="botao enjoei" href="https://enjoei.com.br/vaniamodas" target="_blank">Enjoei</a>
@@ -213,83 +82,128 @@ font-weight:600;
 
 <section class="produtos">
 <h2>Produtos</h2>
-
-<div class="grid">
-
-<div class="card">
-<div class="foto">IMAGEM</div>
-<div class="nome">Vestido Elegante</div>
-<div class="preco" data-price="149">R$ 149</div>
-<button class="add" onclick="addToCart('Vestido Elegante',149)">Adicionar ao carrinho</button>
-</div>
-
-<div class="card">
-<div class="foto">IMAGEM</div>
-<div class="nome">Conjunto Feminino</div>
-<div class="preco" data-price="189">R$ 189</div>
-<button class="add" onclick="addToCart('Conjunto Feminino',189)">Adicionar ao carrinho</button>
-</div>
-
-<div class="card">
-<div class="foto">IMAGEM</div>
-<div class="nome">Blusa Moderna</div>
-<div class="preco" data-price="79">R$ 79</div>
-<button class="add" onclick="addToCart('Blusa Moderna',79)">Adicionar ao carrinho</button>
-</div>
-
-</div>
+<div class="grid" id="produtos"></div>
 </section>
 
 <div class="cart" id="cart">
 <h2>Seu carrinho</h2>
 <div id="cartItems"></div>
-<h3>Total: R$ <span id="total">0</span></h3>
-<button class="checkout" onclick="checkoutWhats()">Finalizar pelo WhatsApp</button>
+
+<h3>Subtotal: R$ <span id="subtotal">0</span></h3>
+<h3>Frete: R$ <span id="frete">0</span></h3>
+<h2>Total: R$ <span id="total">0</span></h2>
+
+<input id="cupom" placeholder="Cupom desconto">
+<button onclick="aplicarCupom()">Aplicar cupom</button>
+
+<input id="cep" placeholder="Digite seu CEP">
+<button onclick="calcularFrete()">Calcular frete (Correios)</button>
+
+<button class="checkout" onclick="checkoutWhats()">Finalizar WhatsApp</button>
+<button class="pix" onclick="pagarPix()">Pagar com PIX</button>
 </div>
 
 <footer>
 Instagram: @vaniamodas_pirajui<br>
-TikTok: <a href="https://tiktok.com/@vania.lima.da.sil6" target="_blank">@vania.lima.da.sil6</a>
+TikTok: @vania.lima.da.sil6
 </footer>
 
 <a class="whatsapp" href="https://wa.me/5511971386664" target="_blank">WhatsApp</a>
 
 <script>
-let cart=[]
+let cart = JSON.parse(localStorage.getItem('cart')) || []
+let desconto = 0
+let frete = 0
 
-function toggleCart(){
-document.getElementById('cart').classList.toggle('open')
+const produtos = [
+{nome:'Vestido Elegante',preco:149},
+{nome:'Conjunto Feminino',preco:189},
+{nome:'Blusa Moderna',preco:79},
+{nome:'Saia Midi',preco:129},
+{nome:'Bolsa Fashion',preco:99}
+]
+
+function renderProdutos(){
+const area=document.getElementById('produtos')
+area.innerHTML=''
+produtos.forEach((p,i)=>{
+area.innerHTML+=`
+<div class="card">
+<div class="foto">IMAGEM</div>
+<div class="nome">${p.nome}</div>
+<div class="preco">R$ ${p.preco}</div>
+<button class="add" onclick="addToCart(${i})">Adicionar</button>
+</div>`
+})
 }
 
-function addToCart(nome,preco){
-cart.push({nome,preco})
-updateCart()
-}
+function toggleCart(){document.getElementById('cart').classList.toggle('open')}
+
+function addToCart(i){cart.push(produtos[i]); salvar(); updateCart()}
+
+function salvar(){localStorage.setItem('cart',JSON.stringify(cart))}
 
 function updateCart(){
 const items=document.getElementById('cartItems')
 items.innerHTML=''
-let total=0
+let subtotal=0
 
 cart.forEach(p=>{
-items.innerHTML+=`<div class="cart-item">${p.nome} - R$ ${p.preco}</div>`
-total+=p.preco
+items.innerHTML+=`<div class='cart-item'>${p.nome} - R$ ${p.preco}</div>`
+subtotal+=p.preco
 })
 
-document.getElementById('total').innerText=total
+let total=subtotal - desconto + frete
 
+document.getElementById('subtotal').innerText=subtotal.toFixed(2)
+document.getElementById('frete').innerText=frete.toFixed(2)
+document.getElementById('total').innerText=total.toFixed(2)
 document.getElementById('count').innerText=cart.length
 }
 
-function checkoutWhats(){
-let msg='Olá! Quero comprar:%0A'
-cart.forEach(p=>{
-msg+=`• ${p.nome} - R$ ${p.preco}%0A`
-})
-msg+='Total: R$ '+document.getElementById('total').innerText
+function aplicarCupom(){
+const c=document.getElementById('cupom').value
+if(c==='BEMVINDA10'){
+const subtotal=cart.reduce((s,p)=>s+p.preco,0)
+desconto=subtotal*0.10
+alert('Cupom aplicado!')
+}else alert('Cupom inválido')
+updateCart()
+}
 
+function calcularFrete(){
+const cep=document.getElementById('cep').value
+if(cep.length>=8){
+frete=25
+alert('Frete calculado via Correios')
+}else alert('CEP inválido')
+updateCart()
+}
+
+function checkoutWhats(){
+let msg='Pedido:%0A'
+cart.forEach(p=>msg+=`• ${p.nome} - R$ ${p.preco}%0A`)
+msg+='Total: R$ '+document.getElementById('total').innerText
 window.open('https://wa.me/5511971386664?text='+msg)
 }
+
+function pagarPix(){
+alert('PIX enviado! Use a chave: 11971386664')
+salvarPedido()
+}
+
+function salvarPedido(){
+let pedidos=JSON.parse(localStorage.getItem('pedidos'))||[]
+pedidos.push({data:new Date(),itens:cart,total:document.getElementById('total').innerText})
+localStorage.setItem('pedidos',JSON.stringify(pedidos))
+cart=[]
+salvar()
+updateCart()
+alert('Pedido salvo com sucesso')
+}
+
+renderProdutos()
+updateCart()
 </script>
 
 </body>
