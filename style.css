@@ -31,9 +31,20 @@ top:0;
 z-index:999;
 }
 
-.logo{
+.logo-area{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-img{
+height:40px;
+border-radius:8px;
+}
+
+.logo-text{
 font-weight:600;
-font-size:20px;
+font-size:18px;
 }
 
 .menu a{
@@ -47,7 +58,7 @@ font-size:14px;
 color:#f06c9b;
 }
 
-/* CARRINHO BOTÃO */
+/* CARRINHO */
 .cart-btn{
 background:#f06c9b;
 color:white;
@@ -82,7 +93,7 @@ color:white;
 font-size:14px;
 }
 
-/* CORES BOTÕES */
+/* CORES */
 .nude{background:#e8a1a8;}
 .lilas{background:#bfa2db;}
 .peach{background:#f2b9a1;}
