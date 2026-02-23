@@ -10,7 +10,7 @@ background:#fdf6f9;
 color:#333;
 }
 
-/* TOPO */
+/* TOPO CUPOM */
 .topbar{
 background:#f4b6c2;
 padding:8px;
@@ -18,7 +18,7 @@ text-align:center;
 font-size:14px;
 }
 
-/* MENU */
+/* MENU NAVBAR */
 .navbar{
 display:flex;
 justify-content:space-between;
@@ -31,11 +31,26 @@ top:0;
 z-index:999;
 }
 
+/* LOGO DO LADO DO NOME */
+.logo-area{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo{
+height:30px; /* tamanho elegante */
+width:auto;
+object-fit:contain;
+}
+
 .logo-text{
 font-weight:600;
 letter-spacing:1px;
+font-size:16px;
 }
 
+/* MENU LINKS */
 .menu a{
 margin:0 10px;
 text-decoration:none;
@@ -47,13 +62,14 @@ font-size:14px;
 color:#f06c9b;
 }
 
-/* CARRINHO */
+/* BOTÃO CARRINHO */
 .cart-btn{
 background:#f06c9b;
 color:white;
 padding:6px 12px;
 border-radius:20px;
 cursor:pointer;
+font-size:14px;
 }
 
 /* HERO */
@@ -82,7 +98,7 @@ color:white;
 font-size:14px;
 }
 
-/* CORES */
+/* CORES BOTÕES */
 .nude{background:#e8a1a8;}
 .lilas{background:#bfa2db;}
 .peach{background:#f2b9a1;}
@@ -121,6 +137,7 @@ color:white;
 cursor:pointer;
 }
 
+/* PROMO BADGE */
 .badge{
 background:red;
 color:white;
@@ -129,7 +146,7 @@ border-radius:8px;
 font-size:12px;
 }
 
-/* INFO */
+/* INFO SECTIONS */
 .info{
 padding:30px 20px;
 text-align:center;
@@ -162,13 +179,4 @@ border-radius:20px;
 background:#f06c9b;
 color:white;
 cursor:pointer;
-}
-.logo-topo{
-background:white;
-padding:20px;
-text-align:center;
-}
-
-.logo {
-  height: 32px; /* pequeno chic */
 }
