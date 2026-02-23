@@ -31,18 +31,6 @@ top:0;
 z-index:999;
 }
 
-.logo-area{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.logo-img{
-height:40px;
-border-radius:8px;
-object-fit:contain;
-}
-
 .logo-text{
 font-weight:600;
 letter-spacing:1px;
@@ -174,4 +162,16 @@ border-radius:20px;
 background:#f06c9b;
 color:white;
 cursor:pointer;
+}
+.logo-topo{
+background:white;
+padding:20px;
+text-align:center;
+}
+
+.logo-grande{
+height:180px;
+max-width:320px;
+object-fit:contain;
+filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
 }
