@@ -1,156 +1,161 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Nude Pastel</title>
 
-<title>Vânia Modas | Loja Online</title>
+<style>
 
-<link rel="stylesheet" href="style.css">
+/* =========================
+   RESET BÁSICO
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+/* =========================
+   VARIÁVEIS DE CORES
+========================= */
+:root {
+
+  --fundo-principal: #fdf7f5;
+  --card-bg: #ffffff;
+
+  --texto-principal: #5c4b4b;
+  --texto-secundario: #8a6f6f;
+
+  --nude-rose: #f4c6cc;
+  --nude-pessego: #f8d2b3;
+  --nude-lavanda: #e3d6f3;
+  --nude-areia: #f3e2cf;
+  --nude-caramelo: #e6bfa8;
+  --nude-salvia: #cfe3d8;
+
+  --hover-rose: #eaaab2;
+  --hover-pessego: #f2b98f;
+  --hover-lavanda: #d1bdf0;
+  --hover-areia: #e7cfb4;
+  --hover-caramelo: #d9a989;
+  --hover-salvia: #b9d5c8;
+
+  --sombra: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+   FUNDO
+========================= */
+body {
+  background: linear-gradient(135deg, #fff7f4, #fdf1ee);
+  color: var(--texto-principal);
+  padding: 40px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+.card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--sombra);
+  max-width: 420px;
+  margin: auto;
+  text-align: center;
+}
+
+
+/* =========================
+   IMAGEM OPCIONAL
+========================= */
+.card img {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+
+/* =========================
+   TITULO
+========================= */
+.card h2 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+.card p {
+  color: var(--texto-secundario);
+  margin-bottom: 25px;
+}
+
+
+/* =========================
+   BOTÕES BASE
+========================= */
+.btn {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 6px;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+
+/* =========================
+   CORES DOS BOTÕES
+========================= */
+
+.btn-rose { background: var(--nude-rose); }
+.btn-rose:hover { background: var(--hover-rose); }
+
+.btn-pessego { background: var(--nude-pessego); }
+.btn-pessego:hover { background: var(--hover-pessego); }
+
+.btn-lavanda { background: var(--nude-lavanda); }
+.btn-lavanda:hover { background: var(--hover-lavanda); }
+
+.btn-areia { background: var(--nude-areia); }
+.btn-areia:hover { background: var(--hover-areia); }
+
+.btn-caramelo { background: var(--nude-caramelo); }
+.btn-caramelo:hover { background: var(--hover-caramelo); }
+
+.btn-salvia { background: var(--nude-salvia); }
+.btn-salvia:hover { background: var(--hover-salvia); }
+
+</style>
 </head>
 
 <body>
 
-<div class="topbar">
-Cupom de boas vindas: BEMVINDA10
-</div>
-
-<nav>
-<div class="logo">VÂNIA MODAS</div>
-
-<div class="menu">
-<a href="#produtos">Produtos</a>
-<a href="#sobre">Sobre</a>
-<a href="#contato">Contato</a>
-<a href="#politicas">Políticas</a>
-<span class="cart-btn" onclick="toggleCart()">Carrinho (<span id="count">0</span>)</span>
-</div>
-</nav>
-
-<section class="hero">
-<h1>Moda feminina moderna e elegante</h1>
-<p>Compre direto no site ou em nossas plataformas</p>
-
-<a class="botao" href="https://wa.me/5511971386664" target="_blank">WhatsApp</a>
-<a class="botao" href="https://enjoei.com.br/vaniamodas" target="_blank">Enjoei</a>
-<a class="botao" href="https://s.shopee.com.br/7AYKPWVtTs" target="_blank">Shopee</a>
-<a class="botao" href="https://chat.whatsapp.com/LoO4h3hLxGiLwfIPNtbfMi" target="_blank">Grupo VIP</a>
-</section>
-
-<section id="produtos" class="produtos">
-<h2>Produtos</h2>
-
-<div class="grid">
-
 <div class="card">
-<!-- imagem opcional -->
-<!-- <img src="img/vestido.jpg" class="foto-produto"> -->
-<div class="nome">Vestido Elegante</div>
-<div class="preco">R$ 149</div>
-<button class="add" onclick="addToCart('Vestido Elegante',149)">Adicionar</button>
-</div>
 
-<div class="card">
-<!-- <img src="img/conjunto.jpg" class="foto-produto"> -->
-<div class="nome">Conjunto Feminino</div>
-<div class="preco">R$ 189</div>
-<button class="add" onclick="addToCart('Conjunto Feminino',189)">Adicionar</button>
-</div>
+  <!-- IMAGEM OPCIONAL -->
+  <!-- se não quiser imagem, pode apagar essa linha -->
+  <img src="https://picsum.photos/500/300" alt="Imagem decorativa">
 
-<div class="card">
-<!-- <img src="img/blusa.jpg" class="foto-produto"> -->
-<div class="nome">Blusa Moderna</div>
-<div class="preco">R$ 79</div>
-<button class="add" onclick="addToCart('Blusa Moderna',79)">Adicionar</button>
-</div>
+  <h2>Título do Card</h2>
+  <p>Descrição delicada em tons nude pastel mais vivos e elegantes.</p>
 
-<div class="card">
-<!-- <img src="img/saia.jpg" class="foto-produto"> -->
-<div class="nome">Saia Midi</div>
-<div class="preco">R$ 129</div>
-<button class="add" onclick="addToCart('Saia Midi',129)">Adicionar</button>
-</div>
-
-<div class="card">
-<!-- <img src="img/bolsa.jpg" class="foto-produto"> -->
-<div class="nome">Bolsa Fashion</div>
-<div class="preco">R$ 199</div>
-<button class="add" onclick="addToCart('Bolsa Fashion',199)">Adicionar</button>
-</div>
+  <button class="btn btn-rose">Confirmar</button>
+  <button class="btn btn-pessego">Editar</button>
+  <button class="btn btn-lavanda">Detalhes</button>
+  <button class="btn btn-salvia">Salvar</button>
 
 </div>
-</section>
-
-<section id="sobre" class="sobre">
-<h2>Sobre a loja</h2>
-<p>
-A Vânia Modas é uma loja online de moda feminina moderna e elegante,
-com peças selecionadas para mulheres que valorizam estilo e delicadeza.
-</p>
-</section>
-
-<section id="contato" class="sobre">
-<h2>Contato</h2>
-<p>WhatsApp: (11) 97138-6664</p>
-<p>Instagram: @vaniamodas_pirajui</p>
-<p>TikTok: @vania.lima.da.sil6</p>
-</section>
-
-<section id="politicas" class="sobre">
-<h2>Políticas da Loja</h2>
-<p>Trocas em até 7 dias após recebimento.</p>
-<p>Envio via Correios.</p>
-<p>Pagamento via PIX.</p>
-</section>
-
-<div class="cart" id="cart">
-<h2>Seu carrinho</h2>
-<div id="cartItems"></div>
-<h3>Total: R$ <span id="total">0</span></h3>
-<button class="checkout" onclick="checkoutWhats()">Finalizar pelo WhatsApp</button>
-</div>
-
-<a class="whatsapp" href="https://wa.me/5511971386664" target="_blank">
-WhatsApp
-</a>
-
-<script>
-let cart=[]
-
-function toggleCart(){
-document.getElementById('cart').classList.toggle('open')
-}
-
-function addToCart(nome,preco){
-cart.push({nome,preco})
-updateCart()
-}
-
-function updateCart(){
-const items=document.getElementById('cartItems')
-items.innerHTML=''
-let total=0
-
-cart.forEach(p=>{
-items.innerHTML+=`<div>${p.nome} - R$ ${p.preco}</div>`
-total+=p.preco
-})
-
-document.getElementById('total').innerText=total
-document.getElementById('count').innerText=cart.length
-}
-
-function checkoutWhats(){
-let msg='Olá! Quero comprar:%0A'
-cart.forEach(p=>{
-msg+=`• ${p.nome} - R$ ${p.preco}%0A`
-})
-msg+='Total: R$ '+document.getElementById('total').innerText
-window.open('https://wa.me/5511971386664?text='+msg)
-}
-</script>
 
 </body>
 </html>
