@@ -3,89 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vania Modas</title>
 
+<title>Vânia Modas | Loja Online</title>
+
+<meta name="description" content="Moda feminina moderna e elegante. Compre pelo site, WhatsApp, Enjoei ou Shopee.">
+
+<link rel="icon" href="img/favicon.png">
 <link rel="stylesheet" href="style.css">
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<!-- TOPO / LOGO -->
-<header class="topo">
-<img src="logo.png" class="logo">
-</header>
+<!-- BANNER -->
+<div class="topbar">
+🔥 Cupom de boas vindas: BEMVINDA10
+</div>
 
-<!-- MENU AZUL -->
-<nav class="menu">
-<a href="#">Home</a>
+<!-- MENU -->
+<nav>
+<div class="logo">VÂNIA MODAS</div>
+
+<div class="menu">
 <a href="#produtos">Produtos</a>
 <a href="#sobre">Sobre</a>
 <a href="#contato">Contato</a>
 <a href="#politicas">Políticas</a>
+<span class="cart-btn" onclick="toggleCart()">Carrinho (<span id="count">0</span>)</span>
+</div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-<h1>Moda feminina elegante e acessível 💕</h1>
+<h1>Moda feminina moderna e elegante</h1>
+<p>Compre direto no site ou em nossas plataformas</p>
 
-<a class="botao" href="https://s.shopee.com.br/7AYKPWVtTs" target="_blank">Comprar na Shopee</a>
-
-<a class="botao" href="https://enjoei.com.br/vaniamodas" target="_blank">Loja Enjoei</a>
-
-<a class="botao" href="https://chat.whatsapp.com/LoO4h3hLxGiLwfIPNtbfMi" target="_blank">
-Grupo Promoções WhatsApp
-</a>
-
-<a class="botao" href="https://tiktok.com/@vania.lima.da.sil6" target="_blank">
-TikTok Loja
-</a>
-
-<!-- COLOQUE SEU WHATS DIRETO DE VENDAS -->
-<a class="botao" href="https://wa.me/SEUNUMERO" target="_blank">
-Falar com Vendedora
-</a>
-
+<a class="botao whats" href="https://wa.me/5511971386664" target="_blank">WhatsApp</a>
+<a class="botao enjoei" href="https://enjoei.com.br/vaniamodas" target="_blank">Enjoei</a>
+<a class="botao shopee" href="https://s.shopee.com.br/7AYKPWVtTs" target="_blank">Shopee</a>
+<a class="botao grupo" href="https://chat.whatsapp.com/LoO4h3hLxGiLwfIPNtbfMi" target="_blank">Grupo VIP</a>
 </section>
 
 <!-- PRODUTOS -->
-<section id="produtos">
-<h2 style="text-align:center">Nossos Produtos</h2>
+<section id="produtos" class="produtos">
+<h2>Nossos Produtos</h2>
 
-<div class="produtos">
+<div class="grid">
 
-<div class="produto">
-<img src="https://images.unsplash.com/photo-1520975922284-9c4c1c7a0d48">
-<h3>Vestido Floral</h3>
-<p class="preco">R$ 89</p>
-<button class="btn-comprar" onclick="add(0)">Comprar</button>
+<div class="card">
+<div class="foto">Imagem Produto</div>
+<div class="nome">Vestido Elegante</div>
+<div class="preco" data-price="149">R$ 149</div>
+<button class="add" onclick="addToCart('Vestido Elegante',149)">Adicionar ao carrinho</button>
 </div>
 
-<div class="produto">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
-<h3>Blusa Elegante</h3>
-<p class="preco">R$ 59</p>
-<button class="btn-comprar" onclick="add(1)">Comprar</button>
+<div class="card">
+<div class="foto">Imagem Produto</div>
+<div class="nome">Conjunto Feminino</div>
+<div class="preco" data-price="189">R$ 189</div>
+<button class="add" onclick="addToCart('Conjunto Feminino',189)">Adicionar ao carrinho</button>
 </div>
 
-<div class="produto">
-<img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1">
-<h3>Saia Midi</h3>
-<p class="preco">R$ 79</p>
-<button class="btn-comprar" onclick="add(2)">Comprar</button>
+<div class="card">
+<div class="foto">Imagem Produto</div>
+<div class="nome">Blusa Moderna</div>
+<div class="preco" data-price="79">R$ 79</div>
+<button class="add" onclick="addToCart('Blusa Moderna',79)">Adicionar ao carrinho</button>
 </div>
 
-<div class="produto">
-<img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9">
-<h3>Conjunto Feminino</h3>
-<p class="preco">R$ 129</p>
-<button class="btn-comprar" onclick="add(3)">Comprar</button>
+<div class="card">
+<div class="foto">Imagem Produto</div>
+<div class="nome">Saia Midi Premium</div>
+<div class="preco" data-price="129">R$ 129</div>
+<button class="add" onclick="addToCart('Saia Midi Premium',129)">Adicionar</button>
 </div>
 
-<div class="produto">
-<img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3">
-<h3>Bolsa Fashion</h3>
-<p class="preco">R$ 99</p>
-<button class="btn-comprar" onclick="add(4)">Comprar</button>
+<div class="card">
+<div class="foto">Imagem Produto</div>
+<div class="nome">Bolsa Fashion Luxo</div>
+<div class="preco" data-price="199">R$ 199</div>
+<button class="add" onclick="addToCart('Bolsa Fashion Luxo',199)">Adicionar</button>
 </div>
 
 </div>
@@ -93,44 +91,105 @@ Falar com Vendedora
 
 <!-- SOBRE -->
 <section id="sobre" class="sobre">
-<h2>Sobre a Vania Modas</h2>
+<h2>Sobre a loja</h2>
 <p>
-A Vania Modas nasceu para trazer estilo, elegância e preço justo.
-Selecionamos peças modernas e femininas para valorizar sua beleza
-em qualquer ocasião.
+A Vânia Modas é uma loja online de moda feminina elegante e moderna,
+com peças selecionadas para mulheres que gostam de estilo e qualidade.
 </p>
 </section>
 
 <!-- CONTATO -->
 <section id="contato" class="sobre">
 <h2>Contato</h2>
-<p>WhatsApp vendas: clique no botão acima</p>
-<p>Grupo promoções exclusivas no WhatsApp</p>
-<p>Siga nossa loja no TikTok</p>
+<p>WhatsApp: (11) 97138-6664</p>
+<p>Instagram: @vaniamodas_pirajui</p>
+<p>TikTok: @vania.lima.da.sil6</p>
 </section>
 
 <!-- POLITICAS -->
 <section id="politicas" class="sobre">
 <h2>Políticas da Loja</h2>
-
-<p><b>Envio:</b> Correios para todo Brasil</p>
-<p><b>Prazo:</b> conforme cálculo do frete</p>
-<p><b>Trocas:</b> até 7 dias após recebimento</p>
-<p><b>Pagamento:</b> PIX ou plataformas parceiras</p>
-
+<p>Trocas em até 7 dias após recebimento.</p>
+<p>Envio via Correios.</p>
+<p>Pagamento via PIX ou plataformas parceiras.</p>
 </section>
 
-<!-- RODAPÉ -->
-<footer>
-<p>© 2025 Vania Modas — Todos os direitos reservados</p>
-</footer>
+<!-- CARRINHO -->
+<div class="cart" id="cart">
+<h2>Seu carrinho</h2>
+
+<div id="cartItems"></div>
+
+<label>Cupom:</label>
+<input id="cupom" placeholder="Digite o cupom">
+
+<label>Frete (R$):</label>
+<input id="frete" value="15">
+
+<h3>Total: R$ <span id="total">0</span></h3>
+
+<button class="checkout" onclick="checkout()">Finalizar compra</button>
+</div>
+
+<!-- WHATS FIXO -->
+<a class="whatsapp" href="https://wa.me/5511971386664" target="_blank">WhatsApp</a>
 
 <!-- FIREBASE -->
 <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
-
 <script src="firebase.js"></script>
-<script src="app.js"></script>
+
+<!-- SCRIPT LOJA -->
+<script>
+
+let cart=[]
+
+function toggleCart(){
+document.getElementById('cart').classList.toggle('open')
+}
+
+function addToCart(nome,preco){
+cart.push({nome,preco})
+updateCart()
+}
+
+function updateCart(){
+const items=document.getElementById('cartItems')
+items.innerHTML=''
+let total=0
+
+cart.forEach(p=>{
+items.innerHTML+=`<div class="cart-item">${p.nome} - R$ ${p.preco}</div>`
+total+=p.preco
+})
+
+let frete = Number(document.getElementById("frete").value)
+let cupom = document.getElementById("cupom").value
+
+if(cupom==="BEMVINDA10") total*=0.9
+
+total+=frete
+
+document.getElementById('total').innerText=total.toFixed(2)
+document.getElementById('count').innerText=cart.length
+}
+
+function checkout(){
+let total=document.getElementById("total").innerText
+
+let msg="Olá! Quero comprar:%0A"
+
+cart.forEach(p=>{
+msg+=`• ${p.nome} - R$ ${p.preco}%0A`
+})
+
+msg+="Total com frete: R$ "+total
+msg+="%0A%0APagamento via PIX"
+
+window.open("https://wa.me/5511971386664?text="+msg)
+}
+
+</script>
 
 </body>
 </html>
