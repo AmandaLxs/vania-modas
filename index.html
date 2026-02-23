@@ -6,6 +6,8 @@
 
 <title>Vânia Modas | Loja Online</title>
 
+<meta name="description" content="Moda feminina elegante e minimalista. Compre pelo site, WhatsApp, Shopee ou Enjoei.">
+
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -13,10 +15,12 @@
 
 <body>
 
+<!-- topo -->
 <div class="topbar">
 Cupom de boas vindas: BEMVINDA10
 </div>
 
+<!-- menu -->
 <nav>
 <div class="logo">VÂNIA MODAS</div>
 
@@ -29,6 +33,7 @@ Cupom de boas vindas: BEMVINDA10
 </div>
 </nav>
 
+<!-- hero -->
 <section class="hero">
 <h1>Moda feminina moderna e elegante</h1>
 <p>Compre direto no site ou em nossas plataformas</p>
@@ -39,42 +44,37 @@ Cupom de boas vindas: BEMVINDA10
 <a class="botao" href="https://chat.whatsapp.com/LoO4h3hLxGiLwfIPNtbfMi" target="_blank">Grupo VIP</a>
 </section>
 
+<!-- produtos -->
 <section id="produtos" class="produtos">
 <h2>Produtos</h2>
 
 <div class="grid">
 
 <div class="card">
-<!-- imagem opcional -->
-<!-- <img src="img/vestido.jpg" class="foto-produto"> -->
 <div class="nome">Vestido Elegante</div>
 <div class="preco">R$ 149</div>
 <button class="add" onclick="addToCart('Vestido Elegante',149)">Adicionar</button>
 </div>
 
 <div class="card">
-<!-- <img src="img/conjunto.jpg" class="foto-produto"> -->
 <div class="nome">Conjunto Feminino</div>
 <div class="preco">R$ 189</div>
 <button class="add" onclick="addToCart('Conjunto Feminino',189)">Adicionar</button>
 </div>
 
 <div class="card">
-<!-- <img src="img/blusa.jpg" class="foto-produto"> -->
 <div class="nome">Blusa Moderna</div>
 <div class="preco">R$ 79</div>
 <button class="add" onclick="addToCart('Blusa Moderna',79)">Adicionar</button>
 </div>
 
 <div class="card">
-<!-- <img src="img/saia.jpg" class="foto-produto"> -->
 <div class="nome">Saia Midi</div>
 <div class="preco">R$ 129</div>
 <button class="add" onclick="addToCart('Saia Midi',129)">Adicionar</button>
 </div>
 
 <div class="card">
-<!-- <img src="img/bolsa.jpg" class="foto-produto"> -->
 <div class="nome">Bolsa Fashion</div>
 <div class="preco">R$ 199</div>
 <button class="add" onclick="addToCart('Bolsa Fashion',199)">Adicionar</button>
@@ -83,14 +83,16 @@ Cupom de boas vindas: BEMVINDA10
 </div>
 </section>
 
+<!-- sobre -->
 <section id="sobre" class="sobre">
 <h2>Sobre a loja</h2>
 <p>
 A Vânia Modas é uma loja online de moda feminina moderna e elegante,
-com peças selecionadas para mulheres que valorizam estilo e delicadeza.
+com peças selecionadas para mulheres que valorizam estilo, delicadeza e qualidade.
 </p>
 </section>
 
+<!-- contato -->
 <section id="contato" class="sobre">
 <h2>Contato</h2>
 <p>WhatsApp: (11) 97138-6664</p>
@@ -98,6 +100,7 @@ com peças selecionadas para mulheres que valorizam estilo e delicadeza.
 <p>TikTok: @vania.lima.da.sil6</p>
 </section>
 
+<!-- politicas -->
 <section id="politicas" class="sobre">
 <h2>Políticas da Loja</h2>
 <p>Trocas em até 7 dias após recebimento.</p>
@@ -105,18 +108,25 @@ com peças selecionadas para mulheres que valorizam estilo e delicadeza.
 <p>Pagamento via PIX.</p>
 </section>
 
+<!-- carrinho lateral -->
 <div class="cart" id="cart">
 <h2>Seu carrinho</h2>
+
 <div id="cartItems"></div>
+
 <h3>Total: R$ <span id="total">0</span></h3>
+
 <button class="checkout" onclick="checkoutWhats()">Finalizar pelo WhatsApp</button>
 </div>
 
+<!-- whatsapp fixo -->
 <a class="whatsapp" href="https://wa.me/5511971386664" target="_blank">
 WhatsApp
 </a>
 
+<!-- script carrinho -->
 <script>
+
 let cart=[]
 
 function toggleCart(){
@@ -131,6 +141,7 @@ updateCart()
 function updateCart(){
 const items=document.getElementById('cartItems')
 items.innerHTML=''
+
 let total=0
 
 cart.forEach(p=>{
@@ -144,12 +155,16 @@ document.getElementById('count').innerText=cart.length
 
 function checkoutWhats(){
 let msg='Olá! Quero comprar:%0A'
+
 cart.forEach(p=>{
 msg+=`• ${p.nome} - R$ ${p.preco}%0A`
 })
+
 msg+='Total: R$ '+document.getElementById('total').innerText
+
 window.open('https://wa.me/5511971386664?text='+msg)
 }
+
 </script>
 
 </body>
