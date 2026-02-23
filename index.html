@@ -8,57 +8,7 @@
 <link rel="icon" href="favicon.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{font-family:'Inter',sans-serif;background:#f6efe8;color:#4a3f35}
-
-.banner{
-background:#ff6f91;
-color:white;
-padding:10px;
-text-align:center;
-font-weight:600;
-}
-
-nav{background:white;padding:18px 30px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;position:sticky;top:0;z-index:1000}
-.logo{font-family:'Playfair Display',serif;font-size:24px;letter-spacing:2px}
-.cart-btn{cursor:pointer;background:#c7a17a;color:white;padding:8px 14px;border-radius:6px}
-
-.hero{text-align:center;padding:60px 20px}
-.hero h1{font-family:'Playfair Display',serif;font-size:42px;margin-bottom:10px}
-
-.botao{display:inline-block;padding:14px 28px;border-radius:6px;text-decoration:none;font-weight:600;margin:6px}
-.whats{background:#25d366;color:white}
-.enjoei{background:#ff3b6b;color:white}
-.shopee{background:#ff6a00;color:white}
-.grupo{background:#c7a17a;color:white}
-
-.produtos{padding:40px 20px;max-width:1100px;margin:auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:25px}
-
-.card{background:white;padding:18px;border-radius:10px;box-shadow:0 4px 15px rgba(0,0,0,0.05);text-align:center}
-.foto{height:260px;background:#eee;border-radius:6px;margin-bottom:15px;display:flex;align-items:center;justify-content:center;color:#999}
-.nome{font-weight:600;margin-bottom:5px}
-.preco{color:#c7a17a;font-weight:700;margin-bottom:10px}
-
-.add{background:#4a3f35;color:white;padding:10px;border:none;border-radius:6px;cursor:pointer;width:100%}
-
-.cart{position:fixed;right:-420px;top:0;width:380px;height:100vh;background:white;box-shadow:-5px 0 20px rgba(0,0,0,.2);padding:20px;transition:.3s;z-index:2000;overflow:auto}
-.cart.open{right:0}
-.cart h2{margin-bottom:15px}
-.cart-item{margin-bottom:10px;border-bottom:1px solid #eee;padding-bottom:8px}
-
-input{width:100%;padding:10px;margin-top:8px;border-radius:6px;border:1px solid #ddd}
-
-.checkout{background:#25d366;color:white;padding:14px;border:none;border-radius:6px;width:100%;margin-top:10px;font-weight:600;cursor:pointer}
-.pix{background:#333;color:white;padding:14px;border:none;border-radius:6px;width:100%;margin-top:10px}
-
-footer{text-align:center;padding:30px;margin-top:40px}
-
-.whatsapp{position:fixed;bottom:20px;right:20px;background:#25d366;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:600}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -67,6 +17,14 @@ footer{text-align:center;padding:30px;margin-top:40px}
 
 <nav>
 <div class="logo">VÂNIA MODAS</div>
+
+<div class="menu">
+<a href="#produtos">Produtos</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
+<a href="#politicas">Políticas</a>
+</div>
+
 <span class="cart-btn" onclick="toggleCart()">Carrinho (<span id="count">0</span>)</span>
 </nav>
 
@@ -80,9 +38,60 @@ footer{text-align:center;padding:30px;margin-top:40px}
 <a class="botao grupo" href="https://chat.whatsapp.com/LoO4h3hLxGiLwfIPNtbfMi" target="_blank">Grupo VIP</a>
 </section>
 
-<section class="produtos">
+<section class="produtos" id="produtos">
 <h2>Produtos</h2>
 <div class="grid" id="produtos"></div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" style="padding:60px 20px; max-width:900px; margin:auto; text-align:center;">
+<h2>Sobre a Vânia Modas</h2>
+<p>
+A Vânia Modas é uma loja online especializada em moda feminina moderna e elegante.
+Selecionamos peças com qualidade, estilo e ótimo custo benefício.
+
+Nosso objetivo é oferecer uma experiência prática, segura e encantadora para cada cliente.
+</p>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" style="padding:60px 20px; background:white; text-align:center;">
+<h2>Contato</h2>
+<p>Atendimento rápido e direto:</p>
+
+<p>
+WhatsApp: <a href="https://wa.me/5511971386664" target="_blank">Clique para conversar</a>
+</p>
+
+<p>
+Instagram: <a href="https://instagram.com/vaniamodas_pirajui" target="_blank">@vaniamodas_pirajui</a>
+</p>
+
+<p>
+TikTok: <a href="https://tiktok.com/@vania.lima.da.sil6" target="_blank">@vania.lima.da.sil6</a>
+</p>
+</section>
+
+<!-- POLITICAS -->
+<section id="politicas" style="padding:60px 20px; max-width:900px; margin:auto;">
+<h2>Políticas da Loja</h2>
+
+<h3>Trocas e Devoluções</h3>
+<p>
+Aceitamos trocas em até 7 dias após o recebimento do produto.
+A peça deve estar sem uso e com etiqueta.
+</p>
+
+<h3>Envio</h3>
+<p>
+Os pedidos são enviados via Correios após confirmação do pagamento.
+O prazo depende do CEP informado.
+</p>
+
+<h3>Pagamento</h3>
+<p>
+Aceitamos pagamento via PIX, WhatsApp ou plataformas parceiras.
+</p>
 </section>
 
 <div class="cart" id="cart">
@@ -104,107 +113,16 @@ footer{text-align:center;padding:30px;margin-top:40px}
 </div>
 
 <footer>
-Instagram: @vaniamodas_pirajui<br>
-TikTok: @vania.lima.da.sil6
+© 2026 Vânia Modas — Todos os direitos reservados
 </footer>
 
 <a class="whatsapp" href="https://wa.me/5511971386664" target="_blank">WhatsApp</a>
 
-<script>
-let cart = JSON.parse(localStorage.getItem('cart')) || []
-let desconto = 0
-let frete = 0
-
-const produtos = [
-{nome:'Vestido Elegante',preco:149},
-{nome:'Conjunto Feminino',preco:189},
-{nome:'Blusa Moderna',preco:79},
-{nome:'Saia Midi',preco:129},
-{nome:'Bolsa Fashion',preco:99}
-]
-
-function renderProdutos(){
-const area=document.getElementById('produtos')
-area.innerHTML=''
-produtos.forEach((p,i)=>{
-area.innerHTML+=`
-<div class="card">
-<div class="foto">IMAGEM</div>
-<div class="nome">${p.nome}</div>
-<div class="preco">R$ ${p.preco}</div>
-<button class="add" onclick="addToCart(${i})">Adicionar</button>
-</div>`
-})
-}
-
-function toggleCart(){document.getElementById('cart').classList.toggle('open')}
-
-function addToCart(i){cart.push(produtos[i]); salvar(); updateCart()}
-
-function salvar(){localStorage.setItem('cart',JSON.stringify(cart))}
-
-function updateCart(){
-const items=document.getElementById('cartItems')
-items.innerHTML=''
-let subtotal=0
-
-cart.forEach(p=>{
-items.innerHTML+=`<div class='cart-item'>${p.nome} - R$ ${p.preco}</div>`
-subtotal+=p.preco
-})
-
-let total=subtotal - desconto + frete
-
-document.getElementById('subtotal').innerText=subtotal.toFixed(2)
-document.getElementById('frete').innerText=frete.toFixed(2)
-document.getElementById('total').innerText=total.toFixed(2)
-document.getElementById('count').innerText=cart.length
-}
-
-function aplicarCupom(){
-const c=document.getElementById('cupom').value
-if(c==='BEMVINDA10'){
-const subtotal=cart.reduce((s,p)=>s+p.preco,0)
-desconto=subtotal*0.10
-alert('Cupom aplicado!')
-}else alert('Cupom inválido')
-updateCart()
-}
-
-function calcularFrete(){
-const cep=document.getElementById('cep').value
-if(cep.length>=8){
-frete=25
-alert('Frete calculado via Correios')
-}else alert('CEP inválido')
-updateCart()
-}
-
-function checkoutWhats(){
-let msg='Pedido:%0A'
-cart.forEach(p=>msg+=`• ${p.nome} - R$ ${p.preco}%0A`)
-msg+='Total: R$ '+document.getElementById('total').innerText
-window.open('https://wa.me/5511971386664?text='+msg)
-}
-
-function pagarPix(){
-alert('PIX enviado! Use a chave: 11971386664')
-salvarPedido()
-}
-
-function salvarPedido(){
-let pedidos=JSON.parse(localStorage.getItem('pedidos'))||[]
-pedidos.push({data:new Date(),itens:cart,total:document.getElementById('total').innerText})
-localStorage.setItem('pedidos',JSON.stringify(pedidos))
-cart=[]
-salvar()
-updateCart()
-alert('Pedido salvo com sucesso')
-}
-
-renderProdutos()
-updateCart()
-</script>
+<!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+<script src="firebase.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>
