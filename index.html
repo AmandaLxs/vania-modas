@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vânia Modas</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vânia Modas</title>
 
-    <!-- LIGANDO O CSS EXTERNO -->
-    <link rel="stylesheet" href="style.css">
+<!-- CSS EXTERNO -->
+<link rel="stylesheet" href="style.css">
 
-    <!-- FONTE MODERNA -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<!-- FONTE -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,56 +21,61 @@
 
 <!-- HEADER -->
 <header>
-    <div class="logo">VÂNIA MODAS</div>
+<div class="logo">VÂNIA MODAS</div>
 
-    <nav>
-        <a href="#">Produtos</a>
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
-        <a href="#">Políticas</a>
-    </nav>
+<nav class="menu">
+<a href="#produtos">Produtos</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
+<a href="#politicas">Políticas</a>
+</nav>
 </header>
 
-<!-- CARRINHO ESTILO APP (NÃO CORTA NUNCA) -->
-<span class="cart-btn mobile-cart" onclick="toggleCart()">🛒 <span id="count">0</span></span>
+<!-- CARRINHO FIXO ESTILO APP -->
+<div class="cart-btn" onclick="toggleCart()">🛒 <span id="count">0</span></div>
 
 <!-- HERO -->
 <section class="hero">
-    <h1>Moda feminina moderna e elegante</h1>
-    <p>Compre direto no site ou nas nossas plataformas parceiras</p>
+<h1>Moda feminina moderna e elegante</h1>
+<p>Compre direto no site ou nas nossas plataformas parceiras</p>
 
-    <button class="btn botao-nude">WhatsApp</button>
-    <button class="btn botao-lilas">Shopee</button>
+<div class="hero-botoes">
+<a href="https://wa.me/5511999999999" target="_blank" class="btn botao-nude">WhatsApp</a>
+
+<a href="https://chat.whatsapp.com/SEULINKDOGRUPO" target="_blank" class="btn botao-lilas">Grupo VIP</a>
+
+<a href="https://www.enjoei.com.br/@seuperfil" target="_blank" class="btn botao-enjoei">Enjoei</a>
+</div>
 </section>
 
 <!-- PRODUTOS -->
-<section class="produtos">
-    <h2>Produtos em destaque</h2>
+<section class="produtos" id="produtos">
+<h2>Produtos em destaque</h2>
 
-    <div class="grid-produtos">
+<div class="grid-produtos">
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x300" alt="">
-            <p class="nome-produto">Vestido Floral</p>
-            <p class="preco">R$ 89,90</p>
-            <button class="add-btn" onclick="addToCart('Vestido Floral')">Adicionar</button>
-        </div>
+<div class="card">
+<img src="https://via.placeholder.com/300" />
+<p class="nome-produto">Vestido Floral</p>
+<p class="preco">R$ 89,90</p>
+<button class="add-btn" onclick="addToCart('Vestido Floral')">Adicionar</button>
+</div>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x300" alt="">
-            <p class="nome-produto">Blusa Lilás</p>
-            <p class="preco">R$ 59,90</p>
-            <button class="add-btn" onclick="addToCart('Blusa Lilás')">Adicionar</button>
-        </div>
+<div class="card">
+<img src="https://via.placeholder.com/300" />
+<p class="nome-produto">Blusa Lilás</p>
+<p class="preco">R$ 59,90</p>
+<button class="add-btn" onclick="addToCart('Blusa Lilás')">Adicionar</button>
+</div>
 
-    </div>
+</div>
 </section>
 
-<!-- CARRINHO MODAL -->
+<!-- CARRINHO -->
 <div class="cart-modal" id="cartModal">
-    <h3>Seu Carrinho</h3>
-    <div class="cart-items" id="cartItems"></div>
-    <button class="cart-close" onclick="toggleCart()">Fechar</button>
+<h3>Seu Carrinho</h3>
+<div id="cartItems"></div>
+<button class="cart-close" onclick="toggleCart()">Fechar</button>
 </div>
 
 <!-- SCRIPT -->
@@ -78,21 +83,19 @@
 let cart = [];
 
 function addToCart(produto){
-    cart.push(produto);
-    document.getElementById("count").innerText = cart.length;
-    updateCart();
+ cart.push(produto);
+ document.getElementById("count").innerText = cart.length;
+ updateCart();
 }
 
 function updateCart(){
-    let html = "";
-    cart.forEach(p => {
-        html += "<p>🛍️ " + p + "</p>";
-    });
-    document.getElementById("cartItems").innerHTML = html;
+ let html = "";
+ cart.forEach(p => html += "<p>🛍️ " + p + "</p>");
+ document.getElementById("cartItems").innerHTML = html;
 }
 
 function toggleCart(){
-    document.getElementById("cartModal").classList.toggle("active");
+ document.getElementById("cartModal").classList.toggle("active");
 }
 </script>
 
