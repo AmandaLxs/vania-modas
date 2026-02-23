@@ -8,14 +8,16 @@
 
 <link rel="stylesheet" href="style.css">
 
+<!-- FONTES FEMININAS -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<!-- TOPO -->
+<!-- TOPO CUPOM -->
 <div class="topbar">
-Cupom de boas vindas: BEMVINDA10
+🎁 Cupom de boas-vindas: <b>BEMVINDA10</b>
 </div>
 
 <!-- MENU -->
@@ -27,94 +29,80 @@ Cupom de boas vindas: BEMVINDA10
 <a href="#sobre">Sobre</a>
 <a href="#contato">Contato</a>
 <a href="#politicas">Políticas</a>
-<span class="cart-btn" onclick="toggleCart()">Carrinho (<span id="count">0</span>)</span>
+<span class="cart-btn" onclick="toggleCart()">🛒 Carrinho (<span id="count">0</span>)</span>
 </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
 <h1>Moda feminina moderna e elegante</h1>
-<p>Compre direto no site ou em nossas plataformas</p>
+<p>Compre direto no site ou nas nossas plataformas parceiras</p>
 
 <a class="botao botao-rose" href="https://wa.me/5511971386664" target="_blank">WhatsApp</a>
 <a class="botao botao-pessego" href="https://enjoei.com.br/vaniamodas" target="_blank">Enjoei</a>
 <a class="botao botao-lavanda" href="https://s.shopee.com.br/7AYKPWVtTs" target="_blank">Shopee</a>
-<a class="botao botao-salvia" href="https://chat.whatsapp.com/LoO4h3hLxGiLwfIPNtbfMi" target="_blank">Grupo VIP</a>
+<a class="botao botao-salvia" href="#" target="_blank">Grupo VIP</a>
 </section>
 
 <!-- PRODUTOS -->
 <section id="produtos" class="produtos">
-<h2>Produtos</h2>
+<h2>Produtos em destaque</h2>
 
 <div class="grid">
 
-<!-- PRODUTO -->
+<!-- PRODUTO 1 -->
 <div class="card">
-
 <span class="badge">PROMO</span>
-
-<!-- imagem opcional -->
-<!-- <img src="img/vestido.jpg"> -->
 
 <div class="nome">Vestido Elegante</div>
 <div class="preco-antigo">R$ 199</div>
 <div class="preco">R$ 149</div>
 <div class="estoque">Últimas 3 unidades</div>
 
-<button class="add"
-onclick="addToCart('Vestido Elegante',149,true,199,'https://s.shopee.com.br/7AYKPWVtTs')">
-Adicionar
-</button>
+<button class="add" onclick="addToCart('Vestido Elegante',149)">Adicionar ao carrinho</button>
 
-<a class="comprar-direto"
-href="https://s.shopee.com.br/7AYKPWVtTs"
-target="_blank">
-Comprar direto Shopee
+<a class="comprar-direto" href="https://s.shopee.com.br/7AYKPWVtTs" target="_blank">
+Comprar direto na Shopee
 </a>
-
 </div>
 
-<!-- PRODUTO -->
+<!-- PRODUTO 2 -->
 <div class="card">
 <div class="nome">Conjunto Feminino</div>
 <div class="preco">R$ 189</div>
 
-<button class="add"
-onclick="addToCart('Conjunto Feminino',189)">
-Adicionar
+<button class="add" onclick="addToCart('Conjunto Feminino',189)">
+Adicionar ao carrinho
 </button>
 </div>
 
-<!-- PRODUTO -->
+<!-- PRODUTO 3 -->
 <div class="card">
 <div class="nome">Blusa Moderna</div>
 <div class="preco">R$ 79</div>
 
-<button class="add"
-onclick="addToCart('Blusa Moderna',79)">
-Adicionar
+<button class="add" onclick="addToCart('Blusa Moderna',79)">
+Adicionar ao carrinho
 </button>
 </div>
 
-<!-- PRODUTO -->
+<!-- PRODUTO 4 -->
 <div class="card">
 <div class="nome">Saia Midi</div>
 <div class="preco">R$ 129</div>
 
-<button class="add"
-onclick="addToCart('Saia Midi',129)">
-Adicionar
+<button class="add" onclick="addToCart('Saia Midi',129)">
+Adicionar ao carrinho
 </button>
 </div>
 
-<!-- PRODUTO -->
+<!-- PRODUTO 5 -->
 <div class="card">
 <div class="nome">Bolsa Fashion</div>
 <div class="preco">R$ 199</div>
 
-<button class="add"
-onclick="addToCart('Bolsa Fashion',199)">
-Adicionar
+<button class="add" onclick="addToCart('Bolsa Fashion',199)">
+Adicionar ao carrinho
 </button>
 </div>
 
@@ -125,128 +113,126 @@ Adicionar
 <section id="sobre" class="info">
 <h2>Sobre a loja</h2>
 <p>
-A Vânia Modas é uma loja online de moda feminina moderna e elegante,
-com peças selecionadas para mulheres que valorizam estilo e delicadeza.
+A <b>Vânia Modas</b> é uma loja online de moda feminina moderna e elegante,  
+com peças selecionadas para mulheres que valorizam estilo, conforto e delicadeza.
 </p>
 </section>
 
 <!-- CONTATO -->
 <section id="contato" class="info">
 <h2>Contato</h2>
-<p>WhatsApp: (11) 97138-6664</p>
-<p>Instagram: @vaniamodas_pirajui</p>
-<p>TikTok: @vania.lima.da.sil6</p>
+<p>📲 WhatsApp: (11) 97138-6664</p>
+<p>📸 Instagram: @vaniamodas_pirajui</p>
+<p>🎵 TikTok: @vania.lima.da.sil6</p>
 </section>
 
-<!-- POLITICAS -->
+<!-- POLÍTICAS -->
 <section id="politicas" class="info">
 <h2>Políticas da Loja</h2>
-<p>Trocas em até 7 dias após recebimento.</p>
-<p>Envio via Correios.</p>
-<p>Pagamento via PIX.</p>
+<p>🔄 Trocas em até 7 dias após o recebimento.</p>
+<p>📦 Envio via Correios.</p>
+<p>💳 Pagamento via PIX.</p>
 </section>
 
 <!-- CARRINHO -->
 <div class="cart" id="cart">
 
-<h2>Seu carrinho</h2>
-
+<h2>🛒 Seu carrinho</h2>
 <div id="cartItems"></div>
 
 <hr>
 
 <p>Subtotal: R$ <span id="subtotal">0</span></p>
 <p>Desconto BEMVINDA10: -R$ <span id="desconto">0</span></p>
-<p>Frete Correios: R$ <span id="frete">15</span></p>
+<p>Frete: R$ <span id="frete">15</span></p>
 
 <h3>Total: R$ <span id="total">0</span></h3>
 
 <button class="checkout" onclick="checkoutWhats()">
-Finalizar compra
+Finalizar pedido no WhatsApp
 </button>
 
 </div>
 
-<!-- WHATS FIXO -->
+<!-- BOTÃO WHATS FLUTUANTE -->
 <a class="whatsapp-fixo" href="https://wa.me/5511971386664" target="_blank">
 WhatsApp
 </a>
 
-<!-- SCRIPT LOJA PREMIUM -->
+<!-- SCRIPT -->
 <script>
 
 let cart = JSON.parse(localStorage.getItem("cart")) || []
-
 const FRETE = 15
 const DESCONTO = 0.10
 
 updateCart()
 
 function toggleCart(){
-document.getElementById('cart').classList.toggle('open')
+ document.getElementById('cart').classList.toggle('open')
 }
 
 function addToCart(nome, preco){
-cart.push({nome,preco})
-saveCart()
-updateCart()
+ cart.push({nome,preco})
+ saveCart()
+ updateCart()
 }
 
 function removeItem(i){
-cart.splice(i,1)
-saveCart()
-updateCart()
+ cart.splice(i,1)
+ saveCart()
+ updateCart()
 }
 
 function saveCart(){
-localStorage.setItem("cart", JSON.stringify(cart))
+ localStorage.setItem("cart", JSON.stringify(cart))
 }
 
 function updateCart(){
 
-const items=document.getElementById('cartItems')
-items.innerHTML=''
+ const items = document.getElementById('cartItems')
+ items.innerHTML = ''
+ let subtotal = 0
 
-let subtotal=0
+ cart.forEach((p,i)=>{
+  items.innerHTML += `
+   <div class="cart-item">
+    ${p.nome} - R$ ${p.preco}
+    <button onclick="removeItem(${i})">x</button>
+   </div>
+  `
+  subtotal += p.preco
+ })
 
-cart.forEach((p,i)=>{
-items.innerHTML+=`
-<div class="cart-item">
-${p.nome} - R$ ${p.preco}
-<button onclick="removeItem(${i})">x</button>
-</div>`
-subtotal+=p.preco
-})
+ let desconto = subtotal * DESCONTO
+ let total = subtotal - desconto + FRETE
 
-let desconto = subtotal * DESCONTO
-let total = subtotal - desconto + FRETE
-
-document.getElementById('subtotal').innerText=subtotal.toFixed(2)
-document.getElementById('desconto').innerText=desconto.toFixed(2)
-document.getElementById('frete').innerText=FRETE.toFixed(2)
-document.getElementById('total').innerText=total.toFixed(2)
-document.getElementById('count').innerText=cart.length
+ document.getElementById('subtotal').innerText = subtotal.toFixed(2)
+ document.getElementById('desconto').innerText = desconto.toFixed(2)
+ document.getElementById('frete').innerText = FRETE.toFixed(2)
+ document.getElementById('total').innerText = total.toFixed(2)
+ document.getElementById('count').innerText = cart.length
 }
 
 function checkoutWhats(){
 
-if(cart.length===0){
-alert("Carrinho vazio")
-return
-}
+ if(cart.length === 0){
+  alert("Carrinho vazio")
+  return
+ }
 
-let msg='🛍️ *Pedido Vânia Modas*%0A%0A'
+ let msg = '🛍️ *Pedido Vânia Modas*%0A%0A'
 
-cart.forEach(p=>{
-msg+=`• ${p.nome} — R$ ${p.preco}%0A`
-})
+ cart.forEach(p=>{
+  msg += `• ${p.nome} — R$ ${p.preco}%0A`
+ })
 
-msg+=`%0ASubtotal: R$ ${document.getElementById('subtotal').innerText}`
-msg+=`%0ADesconto: R$ ${document.getElementById('desconto').innerText}`
-msg+=`%0AFrete: R$ ${document.getElementById('frete').innerText}`
-msg+=`%0A%0ATOTAL: R$ ${document.getElementById('total').innerText}`
+ msg += `%0ASubtotal: R$ ${document.getElementById('subtotal').innerText}`
+ msg += `%0ADesconto: R$ ${document.getElementById('desconto').innerText}`
+ msg += `%0AFrete: R$ ${document.getElementById('frete').innerText}`
+ msg += `%0A%0ATOTAL: R$ ${document.getElementById('total').innerText}`
 
-window.open('https://wa.me/5511971386664?text='+msg)
+ window.open('https://wa.me/5511971386664?text='+msg)
 }
 
 </script>
