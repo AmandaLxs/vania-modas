@@ -1,8 +1,12 @@
+/* RESET */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
+
+/* BASE */
 
 body{
 font-family:'Inter',sans-serif;
@@ -11,7 +15,7 @@ color:#4a3f35;
 line-height:1.5;
 }
 
-/* topo */
+/* TOPO */
 
 .topbar{
 background:#e9ded3;
@@ -20,7 +24,7 @@ padding:6px;
 font-size:13px;
 }
 
-/* menu */
+/* NAVBAR */
 
 nav{
 background:white;
@@ -44,7 +48,11 @@ color:#4a3f35;
 font-size:14px;
 }
 
-/* hero */
+.menu a:hover{
+opacity:.6;
+}
+
+/* HERO */
 
 .hero{
 text-align:center;
@@ -64,7 +72,7 @@ font-size:14px;
 margin-bottom:20px;
 }
 
-/* botões pastel elegantes */
+/* BOTÕES PASTEL */
 
 .botao{
 display:inline-block;
@@ -82,7 +90,7 @@ transition:.2s;
 background:#e3d5c7;
 }
 
-/* produtos */
+/* PRODUTOS */
 
 .produtos{
 max-width:950px;
@@ -97,11 +105,15 @@ margin-bottom:30px;
 font-size:22px;
 }
 
+/* GRID */
+
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:20px;
 }
+
+/* CARD */
 
 .card{
 background:white;
@@ -110,6 +122,18 @@ padding:18px;
 text-align:center;
 border:1px solid #eee;
 }
+
+/* IMAGEM OPCIONAL DO PRODUTO */
+
+.foto-produto{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+/* TEXTO PRODUTO */
 
 .nome{
 font-size:14px;
@@ -122,6 +146,8 @@ color:#b89574;
 margin-bottom:10px;
 }
 
+/* BOTÃO ADD */
+
 .add{
 background:#e9ded3;
 border:none;
@@ -130,9 +156,14 @@ width:100%;
 border-radius:6px;
 font-size:13px;
 cursor:pointer;
+transition:.2s;
 }
 
-/* textos */
+.add:hover{
+background:#dcccbd;
+}
+
+/* SEÇÕES TEXTO */
 
 .sobre{
 max-width:600px;
@@ -147,7 +178,7 @@ margin-bottom:10px;
 font-size:20px;
 }
 
-/* carrinho */
+/* CARRINHO LATERAL */
 
 .cart{
 position:fixed;
@@ -160,13 +191,41 @@ padding:20px;
 box-shadow:-5px 0 20px rgba(0,0,0,.1);
 transition:.3s;
 overflow:auto;
+z-index:2000;
 }
 
 .cart.open{
 right:0;
 }
 
-/* whatsapp fixo */
+.cart h2{
+margin-bottom:15px;
+}
+
+.cart-item{
+margin-bottom:10px;
+border-bottom:1px solid #eee;
+padding-bottom:6px;
+}
+
+/* BOTÃO CHECKOUT */
+
+.checkout{
+background:#e9ded3;
+border:none;
+padding:12px;
+width:100%;
+border-radius:8px;
+font-size:14px;
+cursor:pointer;
+margin-top:10px;
+}
+
+.checkout:hover{
+background:#dcccbd;
+}
+
+/* WHATS FIXO */
 
 .whatsapp{
 position:fixed;
@@ -180,7 +239,7 @@ color:#4a3f35;
 font-size:13px;
 }
 
-/* mobile */
+/* RESPONSIVO */
 
 @media(max-width:600px){
 
@@ -192,6 +251,15 @@ font-size:22px;
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
+}
+
+nav{
+flex-direction:column;
+gap:8px;
+}
+
+.cart{
+width:100%;
 }
 
 }
