@@ -1,247 +1,244 @@
-/* ============================= */
-/* RESET */
-/* ============================= */
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:'Inter', sans-serif;
 }
 
 body{
-    background:#fdf7f5;
-    color:#4b3f3f;
+ background:#fdf6f7;
+ color:#4a3b3b;
 }
 
-/* ============================= */
-/* PALETA NUDE PASTEL PREMIUM */
-/* ============================= */
-
+/* 🎨 PALETA PASTEL */
 :root{
-
-    /* fundos */
-    --nude-bg:#fdf7f5;
-    --nude-card:#ffffff;
-    --nude-soft:#f7ebe7;
-
-    /* texto */
-    --texto:#4b3f3f;
-    --texto-claro:#7a6f6f;
-
-    /* botões (mais vivos) */
-    --rose:#e8a1a8;
-    --rose-hover:#db8b94;
-
-    --nude:#d9b8a5;
-    --nude-hover:#caa18a;
-
-    --lilas:#d6c3e5;
-    --lilas-hover:#c2a8da;
-
-    --peach:#f2b9a1;
-    --peach-hover:#e6a68b;
-
-    --verde:#c8dcb3;
-    --verde-hover:#b2cd95;
-
-    /* sombra */
-    --sombra:0 10px 25px rgba(0,0,0,0.06);
+ --rose:#e7a4ad;
+ --lav:#d8c3e8;
+ --peach:#f4b7a8;
+ --green:#cfe3c2;
+ --bg:#fdf6f7;
+ --card:#ffffff;
+ --shadow:0 8px 20px rgba(0,0,0,0.06);
 }
 
-/* ============================= */
-/* HEADER */
-/* ============================= */
-
-header{
-    background:white;
-    padding:20px;
-    text-align:center;
-    box-shadow:var(--sombra);
-    margin-bottom:30px;
+/* TOPO CUPOM */
+.topbar{
+ background:#f3d6da;
+ padding:8px;
+ text-align:center;
+ font-size:14px;
 }
 
-header h1{
-    font-weight:600;
-    letter-spacing:1px;
+/* MENU */
+nav{
+ background:white;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding:15px 40px;
+ box-shadow:var(--shadow);
+ position:sticky;
+ top:0;
+ z-index:100;
 }
 
-/* ============================= */
-/* CONTAINER */
-/* ============================= */
-
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
+.logo{
+ font-family:'Playfair Display', serif;
+ font-size:22px;
+ font-weight:600;
 }
 
-/* ============================= */
-/* GRID PRODUTOS */
-/* ============================= */
+.menu a{
+ margin:0 12px;
+ text-decoration:none;
+ color:#6b5c5c;
+ font-size:14px;
+}
+
+.menu a:hover{
+ color:#e7a4ad;
+}
+
+.cart-btn{
+ background:#e7a4ad;
+ padding:6px 12px;
+ border-radius:20px;
+ color:white;
+ font-size:13px;
+ cursor:pointer;
+}
+
+/* HERO */
+.hero{
+ text-align:center;
+ padding:70px 20px;
+ background:linear-gradient(120deg,#f7e4e8,#efe2f7);
+}
+
+.hero h1{
+ font-family:'Playfair Display', serif;
+ font-size:38px;
+ margin-bottom:10px;
+}
+
+.hero p{
+ color:#6d5f5f;
+ margin-bottom:25px;
+}
+
+.botao{
+ padding:10px 18px;
+ border-radius:25px;
+ text-decoration:none;
+ color:white;
+ font-size:14px;
+ margin:5px;
+ display:inline-block;
+ transition:.2s;
+}
+
+.botao-rose{background:var(--rose);}
+.botao-pessego{background:var(--peach);}
+.botao-lavanda{background:var(--lav);}
+.botao-salvia{background:var(--green);}
+
+.botao:hover{
+ opacity:.85;
+}
+
+/* PRODUTOS */
+.produtos{
+ padding:60px 40px;
+}
+
+.produtos h2{
+ text-align:center;
+ margin-bottom:40px;
+ font-family:'Playfair Display', serif;
+ font-size:28px;
+}
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-    gap:25px;
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:25px;
 }
 
-/* ============================= */
-/* CARD PRODUTO */
-/* ============================= */
-
 .card{
-    background:var(--nude-card);
-    border-radius:16px;
-    padding:18px;
-    box-shadow:var(--sombra);
-    transition:0.25s;
+ background:var(--card);
+ padding:18px;
+ border-radius:16px;
+ box-shadow:var(--shadow);
+ text-align:center;
+ transition:.2s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
+ transform:translateY(-6px);
 }
 
-/* ============================= */
-/* IMAGEM OPCIONAL */
-/* ============================= */
-
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:12px;
-    margin-bottom:12px;
-    background:var(--nude-soft);
+.badge{
+ background:#e94f6e;
+ color:white;
+ padding:4px 10px;
+ font-size:12px;
+ border-radius:10px;
+ display:inline-block;
+ margin-bottom:10px;
 }
 
-/* se não tiver imagem */
-.sem-imagem{
-    height:220px;
-    border-radius:12px;
-    background:var(--nude-soft);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:var(--texto-claro);
-    margin-bottom:12px;
+.nome{
+ font-weight:600;
+ margin-bottom:8px;
 }
 
-/* ============================= */
-/* TEXTO PRODUTO */
-/* ============================= */
-
-.nome-produto{
-    font-size:18px;
-    font-weight:600;
-    margin-bottom:6px;
+.preco-antigo{
+ text-decoration:line-through;
+ color:#999;
+ font-size:13px;
 }
 
 .preco{
-    font-size:16px;
-    color:var(--texto-claro);
-    margin-bottom:14px;
+ font-size:18px;
+ color:#e94f6e;
+ margin-bottom:10px;
 }
 
-/* ============================= */
-/* BOTÕES */
-/* ============================= */
-
-.botao{
-    display:inline-block;
-    padding:10px 16px;
-    border-radius:10px;
-    text-decoration:none;
-    color:white;
-    font-size:14px;
-    font-weight:500;
-    transition:0.25s;
+.estoque{
+ font-size:12px;
+ color:#7c6b6b;
+ margin-bottom:12px;
 }
 
-/* ROSE */
-.botao-rose{
-    background:var(--rose);
-}
-.botao-rose:hover{
-    background:var(--rose-hover);
-}
-
-/* NUDE */
-.botao-nude{
-    background:var(--nude);
-}
-.botao-nude:hover{
-    background:var(--nude-hover);
+.add{
+ background:#e7a4ad;
+ border:none;
+ padding:10px;
+ border-radius:10px;
+ color:white;
+ width:100%;
+ cursor:pointer;
 }
 
-/* LILAS */
-.botao-lilas{
-    background:var(--lilas);
-}
-.botao-lilas:hover{
-    background:var(--lilas-hover);
-}
-
-/* PEACH */
-.botao-peach{
-    background:var(--peach);
-}
-.botao-peach:hover{
-    background:var(--peach-hover);
+.comprar-direto{
+ display:block;
+ margin-top:10px;
+ font-size:12px;
+ color:#8b7b7b;
 }
 
-/* VERDE */
-.botao-verde{
-    background:var(--verde);
-}
-.botao-verde:hover{
-    background:var(--verde-hover);
-}
-
-/* ============================= */
-/* BOTÃO FULL WIDTH */
-/* ============================= */
-
-.botao-full{
-    width:100%;
-    text-align:center;
+/* SOBRE, CONTATO, POLITICAS */
+.info{
+ padding:40px;
+ margin:40px auto;
+ max-width:900px;
+ background:white;
+ border-radius:16px;
+ box-shadow:var(--shadow);
 }
 
-/* ============================= */
-/* FORMULÁRIOS */
-/* ============================= */
-
-input, select, textarea{
-    width:100%;
-    padding:12px;
-    border-radius:10px;
-    border:1px solid #eadfdb;
-    margin-bottom:12px;
-    background:white;
+.info h2{
+ font-family:'Playfair Display', serif;
+ margin-bottom:10px;
 }
 
-/* ============================= */
-/* FOOTER */
-/* ============================= */
-
-footer{
-    margin-top:60px;
-    padding:30px;
-    text-align:center;
-    color:var(--texto-claro);
+/* CARRINHO */
+.cart{
+ position:fixed;
+ right:-100%;
+ top:0;
+ width:300px;
+ height:100vh;
+ background:white;
+ padding:20px;
+ box-shadow:-5px 0 20px rgba(0,0,0,0.1);
+ transition:.3s;
+ z-index:200;
 }
 
-/* ============================= */
-/* RESPONSIVO */
-/* ============================= */
+.cart.open{
+ right:0;
+}
 
-@media(max-width:600px){
+.checkout{
+ background:#e94f6e;
+ color:white;
+ border:none;
+ padding:12px;
+ width:100%;
+ border-radius:10px;
+ cursor:pointer;
+}
 
-    header h1{
-        font-size:22px;
-    }
-
-    .card img{
-        height:180px;
-    }
+/* WHATS FIXO */
+.whatsapp-fixo{
+ position:fixed;
+ bottom:20px;
+ right:20px;
+ background:#25d366;
+ color:white;
+ padding:12px 18px;
+ border-radius:50px;
+ text-decoration:none;
+ font-size:14px;
 }
