@@ -1,101 +1,131 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vânia Modas</title>
 
-<!-- CSS EXTERNO -->
+<title>VÂNIA MODAS</title>
+
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<!-- FONTE -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <!-- TOPO CUPOM -->
-<div class="topbar">
-🎁 Cupom de boas-vindas: <b>BEMVINDA10</b>
-</div>
+<div class="topbar">🎁 Cupom de boas-vindas: BEMVINDA10</div>
 
-<!-- HEADER -->
-<header>
+<!-- MENU -->
+<nav class="navbar">
 <div class="logo">VÂNIA MODAS</div>
 
-<nav class="menu">
+<div class="menu">
 <a href="#produtos">Produtos</a>
 <a href="#sobre">Sobre</a>
 <a href="#contato">Contato</a>
 <a href="#politicas">Políticas</a>
-</nav>
-</header>
+</div>
 
-<!-- CARRINHO FIXO ESTILO APP -->
-<div class="cart-btn" onclick="toggleCart()">🛒 <span id="count">0</span></div>
+<span class="cart-btn" onclick="toggleCart()">🛒 <span id="count">0</span></span>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
 <h1>Moda feminina moderna e elegante</h1>
-<p>Compre direto no site ou nas nossas plataformas parceiras</p>
+<p>Compre direto no site ou nas nossas plataformas</p>
 
-<div class="hero-botoes">
-<a href="https://wa.me/5511999999999" target="_blank" class="btn botao-nude">WhatsApp</a>
-
-<a href="https://chat.whatsapp.com/SEULINKDOGRUPO" target="_blank" class="btn botao-lilas">Grupo VIP</a>
-
-<a href="https://www.enjoei.com.br/@seuperfil" target="_blank" class="btn botao-enjoei">Enjoei</a>
+<div class="hero-buttons">
+<a href="https://wa.me/5511971386664" target="_blank" class="btn nude">WhatsApp</a>
+<a href="https://chat.whatsapp.com/SEU-GRUPO" target="_blank" class="btn lilas">Grupo VIP</a>
+<a href="https://www.enjoei.com.br/@seuperfil" target="_blank" class="btn peach">Enjoei</a>
 </div>
 </section>
 
 <!-- PRODUTOS -->
-<section class="produtos" id="produtos">
+<section id="produtos" class="produtos">
 <h2>Produtos em destaque</h2>
 
-<div class="grid-produtos">
+<div class="grid">
 
 <div class="card">
-<img src="https://via.placeholder.com/300" />
-<p class="nome-produto">Vestido Floral</p>
-<p class="preco">R$ 89,90</p>
-<button class="add-btn" onclick="addToCart('Vestido Floral')">Adicionar</button>
+<span class="badge">🔥 PROMO</span>
+<div class="nome">Vestido Floral</div>
+<div class="preco">R$ 89,90</div>
+<button onclick="addToCart('Vestido Floral',89.9)">Adicionar</button>
 </div>
 
 <div class="card">
-<img src="https://via.placeholder.com/300" />
-<p class="nome-produto">Blusa Lilás</p>
-<p class="preco">R$ 59,90</p>
-<button class="add-btn" onclick="addToCart('Blusa Lilás')">Adicionar</button>
+<div class="nome">Blusa Lilás</div>
+<div class="preco">R$ 59,90</div>
+<button onclick="addToCart('Blusa Lilás',59.9)">Adicionar</button>
 </div>
 
 </div>
 </section>
 
+<!-- SOBRE -->
+<section id="sobre" class="info">
+<h2>Sobre a loja</h2>
+<p>Vânia Modas é uma loja online de moda feminina jovem e moderna.</p>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="info">
+<h2>Contato</h2>
+<p>WhatsApp: (11) 97138-6664</p>
+<p>Instagram: @vaniamodas_pirajui</p>
+</section>
+
+<!-- POLÍTICAS -->
+<section id="politicas" class="info">
+<h2>Políticas</h2>
+<p>Troca em até 7 dias após recebimento.</p>
+<p>Envio via Correios.</p>
+<p>Pagamento via PIX.</p>
+</section>
+
 <!-- CARRINHO -->
-<div class="cart-modal" id="cartModal">
+<div class="cart" id="cart">
 <h3>Seu Carrinho</h3>
 <div id="cartItems"></div>
-<button class="cart-close" onclick="toggleCart()">Fechar</button>
+<p>Total: R$ <span id="total">0</span></p>
+<button onclick="toggleCart()">Fechar</button>
+<button onclick="checkoutWhats()">Finalizar no WhatsApp</button>
 </div>
 
 <!-- SCRIPT -->
 <script>
 let cart = [];
 
-function addToCart(produto){
- cart.push(produto);
- document.getElementById("count").innerText = cart.length;
- updateCart();
+function toggleCart(){
+document.getElementById("cart").classList.toggle("open");
+}
+
+function addToCart(nome, preco){
+cart.push({nome,preco});
+updateCart();
 }
 
 function updateCart(){
- let html = "";
- cart.forEach(p => html += "<p>🛍️ " + p + "</p>");
- document.getElementById("cartItems").innerHTML = html;
+let items = document.getElementById("cartItems");
+items.innerHTML = "";
+let total = 0;
+
+cart.forEach(p=>{
+items.innerHTML += `<div>${p.nome} - R$ ${p.preco}</div>`;
+total += p.preco;
+});
+
+document.getElementById("total").innerText = total.toFixed(2);
+document.getElementById("count").innerText = cart.length;
 }
 
-function toggleCart(){
- document.getElementById("cartModal").classList.toggle("active");
+function checkoutWhats(){
+let msg="🛍️ Pedido Vânia Modas:%0A";
+cart.forEach(p=>{
+msg+=`• ${p.nome} - R$ ${p.preco}%0A`;
+});
+window.open("https://wa.me/5511971386664?text="+msg);
 }
 </script>
 
