@@ -242,3 +242,34 @@ nav{
  text-decoration:none;
  font-size:14px;
 }
+/* 📱 MENU MOBILE AJUSTE */
+@media (max-width: 768px){
+
+ nav{
+  flex-direction:column;
+  align-items:flex-start;
+  padding:10px 15px;
+ }
+
+ .logo{
+  font-size:20px;
+  margin-bottom:8px;
+ }
+
+ .menu{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+ }
+
+ .menu a{
+  font-size:13px;
+ }
+
+ .cart-btn{
+  margin-top:6px;
+  padding:6px 10px;
+  font-size:12px;
+  border-radius:12px;
+ }
+}
