@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Vânia Modas | Moda feminina elegante</title>
-<meta name="description" content="Loja online de moda feminina moderna e elegante. Compre pelo WhatsApp, Enjoei ou participe do grupo VIP de promoções.">
+<meta name="description" content="Loja online de moda feminina moderna e elegante. Compre pelo site, WhatsApp ou Enjoei.">
+<link rel="icon" href="favicon.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -17,6 +18,15 @@ font-family:'Inter',sans-serif;
 background:#f6efe8;
 color:#4a3f35;
 line-height:1.6;
+}
+
+/* BANNER PROMOCIONAL */
+.topbar{
+background:#4a3f35;
+color:white;
+text-align:center;
+padding:8px;
+font-size:14px;
 }
 
 nav{
@@ -79,6 +89,25 @@ margin:6px;
 
 .botao:hover{opacity:.85}
 
+/* BENEFICIOS */
+.beneficios{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:40px 20px;
+text-align:center;
+flex-wrap:wrap;
+}
+
+.beneficio{
+max-width:180px;
+}
+
+.beneficio strong{
+display:block;
+margin-top:8px;
+}
+
 .produtos{
 padding:80px 20px;
 max-width:1100px;
@@ -119,10 +148,22 @@ align-items:center;
 justify-content:center;
 font-size:13px;
 color:#999;
+overflow:hidden;
+}
+
+.foto img{
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
 .nome{font-weight:600;margin-bottom:5px}
 .preco{color:#c7a17a;font-weight:700;margin-bottom:10px}
+
+.desc{
+font-size:14px;
+margin-bottom:10px;
+}
 
 .comprar-links a{
 display:block;
@@ -134,6 +175,24 @@ color:#4a3f35;
 
 .comprar-links a:hover{color:#c7a17a}
 
+/* DEPOIMENTOS */
+.depoimentos{
+background:white;
+padding:70px 20px;
+text-align:center;
+}
+
+.depoimentos h2{
+font-family:'Playfair Display',serif;
+margin-bottom:30px;
+}
+
+.avaliacao{
+max-width:500px;
+margin:15px auto;
+font-style:italic;
+}
+
 .sobre{
 padding:80px 20px;
 max-width:750px;
@@ -144,18 +203,6 @@ text-align:center;
 .sobre h2{
 font-family:'Playfair Display',serif;
 margin-bottom:15px;
-}
-
-.instagram{
-text-align:center;
-padding:60px 20px;
-background:white;
-}
-
-.instagram a{
-text-decoration:none;
-font-weight:600;
-color:#c7a17a;
 }
 
 footer{
@@ -183,22 +230,51 @@ box-shadow:0 4px 12px rgba(0,0,0,.25);
 
 <body>
 
+<div class="topbar">🔥 Promoções exclusivas no grupo VIP • Envio rápido para todo Brasil</div>
+
 <nav>
 <div class="logo">VÂNIA MODAS</div>
 <div class="menu">
 <a href="#produtos">Produtos</a>
 <a href="#sobre">Sobre</a>
+<a href="#politica">Políticas</a>
 <a href="#contato">Contato</a>
 </div>
 </nav>
 
 <section class="hero">
 <h1>Moda feminina moderna e elegante</h1>
-<p>Compre direto com atendimento personalizado ou acesse nossa loja oficial no Enjoei.</p>
+<p>Peças selecionadas para valorizar seu estilo com sofisticação e conforto.</p>
 
-<a class="botao whats" href="https://wa.me/5511971386664" target="_blank">Comprar direto no WhatsApp</a>
+<a class="botao whats" href="https://wa.me/5511971386664" target="_blank">Comprar no WhatsApp</a>
 <a class="botao enjoei" href="https://enjoei.com.br/vaniamodas" target="_blank">Ver loja no Enjoei</a>
-<a class="botao grupo" href="https://chat.whatsapp.com/LoO4h3hLxGiLwfIPNtbfMi" target="_blank">Entrar no Grupo VIP de Promoções</a>
+<a class="botao grupo" href="https://chat.whatsapp.com/LoO4h3hLxGiLwfIPNtbfMi" target="_blank">Grupo VIP</a>
+</section>
+
+<section class="beneficios">
+<div class="beneficio">
+🚚
+<strong>Envio rápido</strong>
+Entrega para todo Brasil
+</div>
+
+<div class="beneficio">
+⭐
+<strong>Peças selecionadas</strong>
+Curadoria exclusiva
+</div>
+
+<div class="beneficio">
+💬
+<strong>Atendimento humanizado</strong>
+Suporte direto no WhatsApp
+</div>
+
+<div class="beneficio">
+🔄
+<strong>Troca facilitada</strong>
+Compra segura
+</div>
 </section>
 
 <section class="produtos" id="produtos">
@@ -207,9 +283,10 @@ box-shadow:0 4px 12px rgba(0,0,0,.25);
 <div class="grid">
 
 <div class="card">
-<div class="foto">FOTO DO PRODUTO</div>
-<div class="nome">Vestido Elegante</div>
-<div class="preco">Consulte disponibilidade</div>
+<div class="foto">IMAGEM DO PRODUTO</div>
+<div class="nome">Vestido Elegante Midi</div>
+<div class="preco">A partir de R$ 149</div>
+<div class="desc">Tecido leve e sofisticado. Ideal para eventos e dia a dia.</div>
 <div class="comprar-links">
 <a href="https://enjoei.com.br/vaniamodas" target="_blank">Comprar no Enjoei</a>
 <a href="https://wa.me/5511971386664" target="_blank">Comprar no WhatsApp</a>
@@ -217,9 +294,10 @@ box-shadow:0 4px 12px rgba(0,0,0,.25);
 </div>
 
 <div class="card">
-<div class="foto">FOTO DO PRODUTO</div>
-<div class="nome">Conjunto Feminino</div>
-<div class="preco">Consulte disponibilidade</div>
+<div class="foto">IMAGEM DO PRODUTO</div>
+<div class="nome">Conjunto Feminino Premium</div>
+<div class="preco">A partir de R$ 189</div>
+<div class="desc">Conforto e elegância para qualquer ocasião.</div>
 <div class="comprar-links">
 <a href="https://enjoei.com.br/vaniamodas" target="_blank">Comprar no Enjoei</a>
 <a href="https://wa.me/5511971386664" target="_blank">Comprar no WhatsApp</a>
@@ -227,19 +305,10 @@ box-shadow:0 4px 12px rgba(0,0,0,.25);
 </div>
 
 <div class="card">
-<div class="foto">FOTO DO PRODUTO</div>
-<div class="nome">Blusa Moderna</div>
-<div class="preco">Consulte disponibilidade</div>
-<div class="comprar-links">
-<a href="https://enjoei.com.br/vaniamodas" target="_blank">Comprar no Enjoei</a>
-<a href="https://wa.me/5511971386664" target="_blank">Comprar no WhatsApp</a>
-</div>
-</div>
-
-<div class="card">
-<div class="foto">FOTO DO PRODUTO</div>
-<div class="nome">Look Completo</div>
-<div class="preco">Consulte disponibilidade</div>
+<div class="foto">IMAGEM DO PRODUTO</div>
+<div class="nome">Blusa Moderna Casual</div>
+<div class="preco">A partir de R$ 79</div>
+<div class="desc">Versátil, confortável e perfeita para looks modernos.</div>
 <div class="comprar-links">
 <a href="https://enjoei.com.br/vaniamodas" target="_blank">Comprar no Enjoei</a>
 <a href="https://wa.me/5511971386664" target="_blank">Comprar no WhatsApp</a>
@@ -247,22 +316,33 @@ box-shadow:0 4px 12px rgba(0,0,0,.25);
 </div>
 
 </div>
+</section>
+
+<section class="depoimentos">
+<h2>O que nossas clientes dizem</h2>
+
+<div class="avaliacao">★★★★★ "Qualidade incrível e atendimento perfeito!" — Juliana S.</div>
+<div class="avaliacao">★★★★★ "Chegou rápido e vestiu super bem." — Camila R.</div>
+<div class="avaliacao">★★★★★ "Já comprei várias vezes, amo essa loja." — Fernanda M.</div>
 </section>
 
 <section class="sobre" id="sobre">
 <h2>Sobre a Vânia Modas</h2>
 <p>
-Loja online especializada em moda feminina moderna e elegante. Trabalhamos com curadoria exclusiva de peças selecionadas, atendimento personalizado e ofertas especiais para clientes VIP.
+Loja online especializada em moda feminina moderna e elegante. Trabalhamos com curadoria exclusiva, peças de qualidade e atendimento personalizado.
 </p>
 </section>
 
-<section class="instagram" id="contato">
-<h2>Contato e redes sociais</h2>
-<p>Instagram: @vaniamodas_pirajui</p>
-<a href="https://enjoei.com.br/vaniamodas" target="_blank">Visitar loja oficial</a>
+<section class="sobre" id="politica">
+<h2>Política de trocas e compras</h2>
+<p>
+Garantimos a qualidade dos produtos. Caso precise trocar, entre em contato em até 7 dias após o recebimento. Atendimento rápido e transparente.
+</p>
 </section>
 
-<footer>
+<footer id="contato">
+Contato WhatsApp: (11) 97138-6664<br>
+Instagram: @vaniamodas_pirajui<br><br>
 © 2026 Vânia Modas • Loja online oficial
 </footer>
 
