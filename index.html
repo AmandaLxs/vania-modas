@@ -82,4 +82,191 @@ margin:6px;
 .produtos{
 padding:80px 20px;
 max-width:1100px;
+margin:auto;
+}
+
+.produtos h2{
+text-align:center;
+margin-bottom:45px;
+font-family:'Playfair Display',serif;
+font-size:28px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:18px;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.05);
+text-align:center;
+transition:.25s;
+}
+
+.card:hover{transform:translateY(-6px)}
+
+.foto{
+height:260px;
+background:#eee;
+border-radius:6px;
+margin-bottom:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:13px;
+color:#999;
+}
+
+.nome{font-weight:600;margin-bottom:5px}
+.preco{color:#c7a17a;font-weight:700;margin-bottom:10px}
+
+.comprar-links a{
+display:block;
+margin:6px 0;
+font-size:14px;
+text-decoration:none;
+color:#4a3f35;
+}
+
+.comprar-links a:hover{color:#c7a17a}
+
+.sobre{
+padding:80px 20px;
+max-width:750px;
+margin:auto;
+text-align:center;
+}
+
+.sobre h2{
+font-family:'Playfair Display',serif;
+margin-bottom:15px;
+}
+
+.instagram{
+text-align:center;
+padding:60px 20px;
+background:white;
+}
+
+.instagram a{
+text-decoration:none;
+font-weight:600;
+color:#c7a17a;
+}
+
+footer{
+text-align:center;
+padding:30px;
+margin-top:40px;
+font-size:14px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 4px 12px rgba(0,0,0,.25);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">VÂNIA MODAS</div>
+<div class="menu">
+<a href="#produtos">Produtos</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
+</div>
+</nav>
+
+<section class="hero">
+<h1>Moda feminina moderna e elegante</h1>
+<p>Compre direto com atendimento personalizado ou acesse nossa loja oficial no Enjoei.</p>
+
+<a class="botao whats" href="https://wa.me/5511971386664" target="_blank">Comprar direto no WhatsApp</a>
+<a class="botao enjoei" href="https://enjoei.com.br/vaniamodas" target="_blank">Ver loja no Enjoei</a>
+<a class="botao grupo" href="https://chat.whatsapp.com/LoO4h3hLxGiLwfIPNtbfMi" target="_blank">Entrar no Grupo VIP de Promoções</a>
+</section>
+
+<section class="produtos" id="produtos">
+<h2>Produtos em destaque</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="foto">FOTO DO PRODUTO</div>
+<div class="nome">Vestido Elegante</div>
+<div class="preco">Consulte disponibilidade</div>
+<div class="comprar-links">
+<a href="https://enjoei.com.br/vaniamodas" target="_blank">Comprar no Enjoei</a>
+<a href="https://wa.me/5511971386664" target="_blank">Comprar no WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<div class="foto">FOTO DO PRODUTO</div>
+<div class="nome">Conjunto Feminino</div>
+<div class="preco">Consulte disponibilidade</div>
+<div class="comprar-links">
+<a href="https://enjoei.com.br/vaniamodas" target="_blank">Comprar no Enjoei</a>
+<a href="https://wa.me/5511971386664" target="_blank">Comprar no WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<div class="foto">FOTO DO PRODUTO</div>
+<div class="nome">Blusa Moderna</div>
+<div class="preco">Consulte disponibilidade</div>
+<div class="comprar-links">
+<a href="https://enjoei.com.br/vaniamodas" target="_blank">Comprar no Enjoei</a>
+<a href="https://wa.me/5511971386664" target="_blank">Comprar no WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<div class="foto">FOTO DO PRODUTO</div>
+<div class="nome">Look Completo</div>
+<div class="preco">Consulte disponibilidade</div>
+<div class="comprar-links">
+<a href="https://enjoei.com.br/vaniamodas" target="_blank">Comprar no Enjoei</a>
+<a href="https://wa.me/5511971386664" target="_blank">Comprar no WhatsApp</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="sobre" id="sobre">
+<h2>Sobre a Vânia Modas</h2>
+<p>
+Loja online especializada em moda feminina moderna e elegante. Trabalhamos com curadoria exclusiva de peças selecionadas, atendimento personalizado e ofertas especiais para clientes VIP.
+</p>
+</section>
+
+<section class="instagram" id="contato">
+<h2>Contato e redes sociais</h2>
+<p>Instagram: @vaniamodas_pirajui</p>
+<a href="https://enjoei.com.br/vaniamodas" target="_blank">Visitar loja oficial</a>
+</section>
+
+<footer>
+© 2026 Vânia Modas • Loja online oficial
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5511971386664" target="_blank">WhatsApp</a>
+
+</body>
 </html>
