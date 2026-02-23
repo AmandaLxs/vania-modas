@@ -3,183 +3,290 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vânia Modas</title>
+
+<title>Vânia Modas | Moda feminina elegante</title>
+<meta name="description" content="Loja online de moda feminina moderna e elegante. Compre pelo WhatsApp, Shopee ou Enjoei.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
 /* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:'Inter',sans-serif;
+background:#f6efe8;
+color:#4a3f35;
+line-height:1.6;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f6efe8;
-    color: #4a3f35;
+/* NAVBAR */
+nav{
+background:white;
+padding:18px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #eee;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-/* HEADER */
-header {
-    background: white;
-    padding: 25px 20px;
-    text-align: center;
-    border-bottom: 1px solid #eee;
+.logo{
+font-family:'Playfair Display',serif;
+font-size:24px;
+letter-spacing:2px;
 }
 
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 2px;
+.menu a{
+margin-left:25px;
+text-decoration:none;
+color:#4a3f35;
+font-weight:500;
 }
 
-.sublogo {
-    font-size: 13px;
-    letter-spacing: 3px;
-    color: #a38f7c;
+.menu a:hover{
+color:#c7a17a;
 }
 
 /* HERO */
-.hero {
-    text-align: center;
-    padding: 70px 20px;
+.hero{
+text-align:center;
+padding:90px 20px;
+max-width:800px;
+margin:auto;
 }
 
-.hero h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:40px;
+margin-bottom:15px;
 }
 
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
+.hero p{
+font-size:18px;
+margin-bottom:30px;
 }
 
-.botao {
-    display: inline-block;
-    background: #c7a17a;
-    color: white;
-    padding: 14px 30px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+.botao{
+display:inline-block;
+padding:14px 30px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+margin:5px;
 }
 
-.botao:hover {
-    background: #b38f6c;
-}
+.whats{background:#25d366;color:white}
+.shopee{background:#ee4d2d;color:white}
+.enjoei{background:#ff3b6b;color:white}
+
+.botao:hover{opacity:.85}
 
 /* PRODUTOS */
-.produtos {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: auto;
+.produtos{
+padding:70px 20px;
+max-width:1100px;
+margin:auto;
 }
 
-.produtos h2 {
-    text-align: center;
-    margin-bottom: 40px;
+.produtos h2{
+text-align:center;
+margin-bottom:40px;
+font-family:'Playfair Display',serif;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
 }
 
-.card {
-    background: white;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
+.card{
+background:white;
+padding:18px;
+border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,0.05);
+text-align:center;
+transition:.25s;
 }
 
-.foto-produto {
-    background: #eee;
-    height: 260px;
-    border-radius: 6px;
-    margin-bottom: 15px;
+.card:hover{
+transform:translateY(-5px);
 }
 
-.nome-produto {
-    font-weight: bold;
-    margin-bottom: 5px;
+.foto{
+height:260px;
+background:#eee;
+border-radius:6px;
+margin-bottom:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:14px;
+color:#999;
 }
 
-.preco {
-    color: #c7a17a;
-    font-weight: bold;
+.nome{font-weight:600;margin-bottom:5px}
+.preco{color:#c7a17a;font-weight:700;margin-bottom:10px}
+
+.comprar-links a{
+display:block;
+margin:6px 0;
+font-size:14px;
+text-decoration:none;
+color:#4a3f35;
 }
+
+.comprar-links a:hover{color:#c7a17a}
 
 /* SOBRE */
-.sobre {
-    padding: 60px 20px;
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
+.sobre{
+padding:70px 20px;
+max-width:750px;
+margin:auto;
+text-align:center;
+}
+
+.sobre h2{
+font-family:'Playfair Display',serif;
+margin-bottom:15px;
 }
 
 /* INSTAGRAM */
-.instagram {
-    text-align: center;
-    padding: 40px 20px;
+.instagram{
+text-align:center;
+padding:50px 20px;
+background:white;
+}
+
+.instagram a{
+text-decoration:none;
+font-weight:600;
+color:#c7a17a;
 }
 
 /* FOOTER */
-footer {
-    background: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 40px;
+footer{
+text-align:center;
+padding:30px;
+margin-top:40px;
+font-size:14px;
 }
 
 /* WHATSAPP FLUTUANTE */
-.whatsapp {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background: #25d366;
-    color: white;
-    padding: 14px 18px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 4px 12px rgba(0,0,0,.25);
 }
 
 </style>
-
 </head>
+
 <body>
 
-<header>
-    <div class="logo">VÂNIA</div>
-    <div class="sublogo">MODAS</div>
-</header>
+<!-- NAVBAR -->
+<nav>
+<div class="logo">VÂNIA MODAS</div>
 
+<div class="menu">
+<a href="#produtos">Produtos</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
+</div>
+</nav>
+
+<!-- HERO -->
 <section class="hero">
-    <h1>Moda feminina moderna e elegante</h1>
-    <p>Peças selecionadas com sofisticação para mulheres reais.</p>
-    <a class="botao" href="https://wa.me/5511971386664">Comprar pelo WhatsApp</a>
+<h1>Moda feminina moderna e elegante</h1>
+<p>Compre com segurança pelo WhatsApp, Shopee ou Enjoei.</p>
+
+<a class="botao whats" href="https://wa.me/5511971386664">Comprar no WhatsApp</a>
+<a class="botao shopee" href="#">Loja Shopee</a>
+<a class="botao enjoei" href="#">Loja Enjoei</a>
 </section>
 
-<section class="produtos">
-    <h2>Destaques da loja</h2>
+<!-- PRODUTOS -->
+<section class="produtos" id="produtos">
+<h2>Destaques da loja</h2>
 
-    <div class="grid">
+<div class="grid">
 
-        <div class="card">
-            <div class="foto-produto"></div>
-            <div class="nome-produto">Vestido Elegante</div>
-            <div class="preco">R$ 149,90</div>
-        </div>
+<div class="card">
+<div class="foto">FOTO DO PRODUTO</div>
+<div class="nome">Vestido Elegante</div>
+<div class="preco">R$ 149,90</div>
+<div class="comprar-links">
+<a href="#">Ver na Shopee</a>
+<a href="#">Ver no Enjoei</a>
+</div>
+</div>
 
-        <div class="card">
-            <div class="foto-produto"></div>
-            <div class="nome-produto">Conjunto Feminino</div>
-            <div class="preco">R$ 189,90</div>
-        </div>
+<div class="card">
+<div class="foto">FOTO DO PRODUTO</div>
+<div class="nome">Conjunto Feminino</div>
+<div class="preco">R$ 189,90</div>
+<div class="comprar-links">
+<a href="#">Ver na Shopee</a>
+<a href="#">Ver no Enjoei</a>
+</div>
+</div>
 
-        <div class="card">
+<div class="card">
+<div class="foto">FOTO DO PRODUTO</div>
+<div class="nome">Blusa Moderna</div>
+<div class="preco">R$ 79,90</div>
+<div class="comprar-links">
+<a href="#">Ver na Shopee</a>
+<a href="#">Ver no Enjoei</a>
+</div>
+</div>
+
+<div class="card">
+<div class="foto">FOTO DO PRODUTO</div>
+<div class="nome">Look Completo</div>
+<div class="preco">R$ 249,90</div>
+<div class="comprar-links">
+<a href="#">Ver na Shopee</a>
+<a href="#">Ver no Enjoei</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- SOBRE -->
+<section class="sobre" id="sobre">
+<h2>Sobre a Vânia Modas</h2>
+<p>
+Loja online especializada em moda feminina moderna e elegante.
+Selecionamos peças que valorizam a beleza, estilo e confiança de cada mulher.
+Atendimento personalizado e curadoria exclusiva.
+</p>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="instagram" id="contato">
+<h2>Siga no Instagram</h2>
+<p>@vaniamodas_pirajui</p>
+<a href="#">Acessar perfil</a>
+</section>
+
+<footer>
+© 2025 Vânia Modas • Loja online oficial
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5511971386664">WhatsApp</a>
+
+</body>
+</html>
