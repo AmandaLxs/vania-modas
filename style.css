@@ -180,3 +180,10 @@ background:#f06c9b;
 color:white;
 cursor:pointer;
 }
+
+/* LOGO PEQUENA NO MENU */
+.logo-img{
+  height: 32px;   /* tamanho pequeno e elegante */
+  width: auto;
+  object-fit: contain;
+}
